@@ -9,7 +9,7 @@ class DataListPage extends StatelessWidget {
       body: Stack(
         children: [
           // 背景层 - 不影响交互
-          Positioned(
+          Positioned.fill(
             child: Column(
               children: [
                 // 上半部分 - 图片背景
@@ -18,9 +18,7 @@ class DataListPage extends StatelessWidget {
                   child: Container(
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: NetworkImage(
-                          'https://picsum.photos/800/600',
-                        ),
+                        image: NetworkImage('https://picsum.photos/800/600'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -29,9 +27,7 @@ class DataListPage extends StatelessWidget {
                 // 下半部分 - 纯色背景
                 Expanded(
                   flex: 4,
-                  child: Container(
-                    color: const Color(0xFFF5F5F5),
-                  ),
+                  child: Container(color: const Color(0xFFF5F5F5)),
                 ),
               ],
             ),
@@ -70,7 +66,7 @@ class DataListPage extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 36),
-                
+
                 // 中间内容区域（跨越上下两部分）
                 Container(
                   padding: const EdgeInsets.all(20),
@@ -104,17 +100,18 @@ class DataListPage extends StatelessWidget {
                       const Text(
                         '上半部分是图片背景\n下半部分是#F5F5F5纯色',
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 14,
-                        ),
+                        style: TextStyle(color: Colors.grey, fontSize: 14),
                       ),
                       const SizedBox(height: 20),
                       ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Theme.of(context).colorScheme.primary,
-                          foregroundColor: Theme.of(context).colorScheme.onPrimary,
+                          backgroundColor: Theme.of(
+                            context,
+                          ).colorScheme.primary,
+                          foregroundColor: Theme.of(
+                            context,
+                          ).colorScheme.onPrimary,
                           padding: const EdgeInsets.symmetric(
                             horizontal: 32,
                             vertical: 12,
@@ -127,7 +124,7 @@ class DataListPage extends StatelessWidget {
                 ),
 
                 const SizedBox(height: 50),
-                
+
                 // 底部列表示例
                 Expanded(
                   child: ListView.builder(
@@ -138,12 +135,25 @@ class DataListPage extends StatelessWidget {
                         margin: const EdgeInsets.only(bottom: 12),
                         child: ListTile(
                           leading: CircleAvatar(
-                            backgroundColor: Theme.of(context).colorScheme.primary,
-                            child: Text('${index + 1}', style: TextStyle(color: Theme.of(context).colorScheme.onPrimary)),
+                            backgroundColor: Theme.of(
+                              context,
+                            ).colorScheme.primary,
+                            child: Text(
+                              '${index + 1}',
+                              style: TextStyle(
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
+                            ),
                           ),
                           title: Text('列表项 ${index + 1}'),
-                          subtitle: const Text('可以正常点击和交互', style: TextStyle(color: Colors.grey)),
-                          trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+                          subtitle: const Text(
+                            '可以正常点击和交互',
+                            style: TextStyle(color: Colors.grey),
+                          ),
+                          trailing: const Icon(
+                            Icons.arrow_forward_ios,
+                            size: 16,
+                          ),
                           onTap: () {},
                         ),
                       );
