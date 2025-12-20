@@ -1,3 +1,4 @@
+import 'package:first_app/config/routes.dart';
 import 'package:flutter/material.dart';
 
 class DataListPage extends StatelessWidget {
@@ -154,7 +155,9 @@ class DataListPage extends StatelessWidget {
                             Icons.arrow_forward_ios,
                             size: 16,
                           ),
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.pushNamed(context, AppRoutes.detail);
+                          },
                         ),
                       );
                     },

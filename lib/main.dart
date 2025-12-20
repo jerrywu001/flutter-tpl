@@ -15,9 +15,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      routes: AppRoutes.routes,
-      initialRoute: AppRoutes.initialRoute,
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: AppRoutes.home,
+      routes: {
+        AppRoutes.home: (context) =>
+            const MyHomePage(title: 'Flutter Demo Home Page'),
+        ...AppRoutes.routes,
+      },
     );
   }
 }
