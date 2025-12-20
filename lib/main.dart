@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'utils/tools.dart';
+
 import 'config/routes.dart';
+import 'utils/tools.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
-      ),
+      theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
       routes: AppRoutes.routes,
       initialRoute: AppRoutes.initialRoute,
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -41,15 +40,14 @@ class _MyHomePageState extends State<MyHomePage> {
       title: '确认',
       content: '是否确认增加计数器？',
     );
-    if (result == false) return;
+
+    if (!mounted || result != true) return;
 
     setState(() {
       _counter++;
     });
 
-    if (context.mounted) {
-      Tools.showMessage(context, 'Counter incremented');
-    }
+    Tools.showMessage(context, 'Counter incremented');
   }
 
   @override
