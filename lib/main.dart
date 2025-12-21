@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'config/routes.dart';
-import 'utils/tools.dart';
+import 'pages/home/index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,59 +31,26 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage> createState() => MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+class MyHomePageState extends State<MyHomePage> {
+  int _selectedIndex = 0;
 
-  void _incrementCounter() async {
-    final result = await showConfirm(
-      context,
-      title: '确认',
-      content: '是否确认增加计数器？',
-    );
+  final List<Widget> _screens = [
+    const HomeScreen(),
+    const MessageScreen(),
+    const MineScreen(),
+  ];
 
-    if (!mounted || result != true) return;
-
+  void onItemTapped(int index) {
     setState(() {
-      _counter++;
+      _selectedIndex = index;
     });
-
-    showToast(context, 'Counter incremented');
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: .center,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, AppRoutes.dataList);
-              },
-              child: const Text('Go to Data List'),
-            ),
-            const SizedBox(height: 10),
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
-    );
+    return _screens[_selectedIndex];
   }
 }

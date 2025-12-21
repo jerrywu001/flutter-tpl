@@ -1,5 +1,6 @@
-import 'package:first_app/config/routes.dart';
 import 'package:flutter/material.dart';
+
+import '../config/routes.dart';
 
 class DataListPage extends StatelessWidget {
   const DataListPage({super.key});

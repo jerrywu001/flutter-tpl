@@ -1,7 +1,8 @@
 import 'dart:math' as math;
 
-import 'package:first_app/utils/tools.dart';
 import 'package:flutter/material.dart';
+
+import '../utils/tools.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key});
@@ -101,7 +102,7 @@ class _DetailPageState extends State<DetailPage> {
                 // ),
                 // 图片背景方式
                 image: DecorationImage(
-                  image: NetworkImage('https://picsum.photos/800/600'),
+                  image: AssetImage('assets/home/bg.png'),
                   fit: BoxFit.cover,
                 ),
               ),
