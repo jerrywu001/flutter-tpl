@@ -1,8 +1,7 @@
+import 'package:first_app/config/routes.dart';
+import 'package:first_app/utils/tools.dart';
+import 'package:first_app/widgets/bottom_nav.dart';
 import 'package:flutter/material.dart';
-
-import '../../config/routes.dart';
-import '../../utils/tools.dart';
-import 'widgets/index.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -34,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        centerTitle: true,
         title: const Text('首页'),
       ),
       body: Center(
@@ -43,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, AppRoutes.dataList);
+                Navigator.pushNamed(context, AppRoutes.detail);
               },
               child: const Text('Go to Data List'),
             ),
@@ -61,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
-      bottomNavigationBar: const CustomBottomNavBar(currentIndex: 0),
+      bottomNavigationBar: const BottomNav(currentIndex: 0),
     );
   }
 }

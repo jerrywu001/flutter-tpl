@@ -45,8 +45,8 @@ The app uses `MyHomePage` (in `main.dart`) as the root container that manages ta
 - `lib/main.dart` - App entry point; contains `MyApp`, `MyHomePage`, and `MyHomePageState` which manages tab switching
 - `lib/config/routes.dart` - Centralized route definitions (`AppRoutes` class) for named routes
 - `lib/pages/home/` - Bottom nav tab screens (HomeScreen, MessageScreen, MineScreen)
-  - `lib/pages/home/widgets/` - Reusable widgets for home screens (e.g., `CustomBottomNavBar`)
-- `lib/pages/` - Nested pages accessible via named routes (e.g., DataListPage, DetailPage)
+- `lib/pages/` - Nested pages accessible via named routes (DetailPage, EditPasswordPage)
+- `lib/widgets/` - Reusable widgets (`BottomNav`, `SvgIcon`)
 - `lib/utils/tools.dart` - Shared utility functions (`showConfirm`, `showToast`, `formatDate`, `isValidEmail`, `debounce`)
 - `assets/` - Static assets referenced in `pubspec.yaml`
 
@@ -57,7 +57,42 @@ The main app uses a tab-based layout managed by `MyHomePageState`:
 - `_screens` list contains the three screen widgets
 - `onItemTapped(int index)` updates the state and triggers a rebuild with the selected screen
 
-Each screen widget (HomeScreen, MessageScreen, MineScreen) imports `CustomBottomNavBar` and passes its own `currentIndex`. The `CustomBottomNavBar` widget handles the navigation bar UI and calls `MyHomePageState.onItemTapped()` via `context.findAncestorStateOfType<MyHomePageState>()`.
+Each screen widget (HomeScreen, MessageScreen, MineScreen) imports `BottomNav` and passes its own `currentIndex`. The `BottomNav` widget handles the navigation bar UI and calls `MyHomePageState.onItemTapped()` via `context.findAncestorStateOfType<MyHomePageState>()`.
+
+### Status Bar Style Management
+
+Use `AnnotatedRegion<SystemUiOverlayStyle>` to manage status bar appearance for specific pages:
+
+```dart
+return AnnotatedRegion<SystemUiOverlayStyle>(
+  value: const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+    statusBarIconBrightness: Brightness.dark,  // Brightness.light for light icons
+  ),
+  child: Scaffold(...),
+);
+```
+
+For pages with dynamic status bar styling (e.g., DetailPage with scrolling), update the AppBar's `systemOverlayStyle` property instead:
+
+```dart
+appBar: AppBar(
+  systemOverlayStyle: SystemUiOverlayStyle(
+    statusBarIconBrightness: _calculateBrightness(),
+  ),
+),
+```
+
+### Reusable Widgets
+
+**SvgIcon** - Simplified SVG icon component that renders a square icon with 1:1 aspect ratio:
+```dart
+SvgIcon(
+  icon: 'assets/home/icon-user.svg',
+  size: 20,
+  color: Color(0xFF333333),  // Optional, defaults to Color(0xFFA28071)
+)
+```
 
 ### Named Route Navigation Pattern
 
@@ -76,3 +111,21 @@ Linting is configured in `analysis_options.yaml` with these enforced rules:
 - `prefer_final_locals`
 - `prefer_single_quotes`
 - `require_trailing_commas`
+
+## Material Interactions
+
+Use `Material` widget as a parent for `InkWell` to enable proper ink splash effects on colored backgrounds:
+
+```dart
+Material(
+  color: Colors.white,
+  borderRadius: BorderRadius.circular(6),
+  child: InkWell(
+    onTap: () { /* ... */ },
+    splashColor: Colors.grey.withValues(alpha: 0.1),
+    child: Padding(...),
+  ),
+)
+```
+
+Without `Material` as a parent, the ink effect from `InkWell` will be invisible on opaque backgrounds.

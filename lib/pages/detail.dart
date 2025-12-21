@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../utils/tools.dart';
 
@@ -48,7 +49,12 @@ class _DetailPageState extends State<DetailPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    // 根据滚动位置动态计算状态栏样式
+    final brightness = _appBarOpacity > 0.5 ? Brightness.dark : Brightness.light;
+
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: const SystemUiOverlayStyle(),
+      child: Scaffold(
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(56.0),
@@ -70,6 +76,10 @@ class _DetailPageState extends State<DetailPage> {
           child: AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0,
+            systemOverlayStyle: SystemUiOverlayStyle(
+              statusBarColor: Colors.transparent,
+              statusBarIconBrightness: brightness,
+            ),
             title: AnimatedDefaultTextStyle(
               duration: const Duration(milliseconds: 200),
               style: TextStyle(
@@ -208,6 +218,7 @@ class _DetailPageState extends State<DetailPage> {
         tooltip: '回到顶部',
         child: const Icon(Icons.arrow_upward),
       ) : null,
+      ),
     );
   }
 }

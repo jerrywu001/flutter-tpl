@@ -1,152 +1,152 @@
+import 'package:first_app/config/routes.dart';
+import 'package:first_app/utils/tools.dart';
+import 'package:first_app/widgets/bottom_nav.dart';
+import 'package:first_app/widgets/svg_icon.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/services.dart';
 
-import 'widgets/index.dart';
-
-class MineScreen extends StatelessWidget {
+class MineScreen extends StatefulWidget {
   const MineScreen({super.key});
 
   @override
+  State<MineScreen> createState() => _MineScreenState();
+}
+
+class _MineScreenState extends State<MineScreen> {
+  void _logout() async {
+    final result = await showConfirm(
+      context,
+      title: '提示',
+      content: '是否确认退出登录？',
+    );
+
+    if (!mounted || result != true) return;
+
+    showToast(context, 'will logout');
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),
-      body: Stack(
-        children: [
-          // Background image
-          Container(
-            decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/home/mine-bg.png'),
-                fit: BoxFit.fitWidth,
-                alignment: Alignment.topCenter,
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: const SystemUiOverlayStyle(),
+      child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          systemOverlayStyle: const SystemUiOverlayStyle(
+            statusBarColor: Colors.transparent,
+            statusBarIconBrightness: Brightness.dark,
+          ),
+        ),
+        body: Stack(
+          children: [
+            Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/home/mine-bg.png'),
+                  fit: BoxFit.fitWidth,
+                  alignment: Alignment.topCenter,
+                ),
               ),
             ),
-          ),
-          // Main content
-          SingleChildScrollView(
-            child: Column(
-              children: [
-                const SizedBox(height: 72),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 26.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Text(
-                        '上海吉舰嘉科技服务有限公司',
-                        style: TextStyle(
-                          color: Color(0xFF333333),
-                          fontSize: 18,
-                          fontWeight: FontWeight.w600,
-                          height: 1.0,
-                        ),
-                      ),
-                      const SizedBox(height: 14),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              SvgPicture.asset(
-                                'assets/home/icon-user.svg',
-                                width: 14,
-                                height: 14,
-                                colorFilter: const ColorFilter.mode(
-                                  Color(0xFFA28071),
-                                  BlendMode.srcIn,
-                                ),
-                              ),
-                              const SizedBox(width: 4),
-                              const Text(
-                                '销售顾问 闻晨佳',
-                                style: TextStyle(
-                                  color: Color(0xFF333333),
-                                  fontSize: 12,
-                                ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 4),
-                          Row(
-                            children: [
-                              SvgPicture.asset(
-                                'assets/home/icon-phone.svg',
-                                width: 14,
-                                height: 14,
-                                colorFilter: const ColorFilter.mode(
-                                  Color(0xFFA28071),
-                                  BlendMode.srcIn,
-                                ),
-                              ),
-                              const SizedBox(width: 4),
-                              const Text(
-                                '13913380929',
-                                style: TextStyle(
-                                  color: Color(0xFF333333),
-                                  fontSize: 12,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 24),
-                // Menu items section
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(6),
-                    ),
+            // Main content
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  const SizedBox(height: 72),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 26.0),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        _buildMenuItem(
-                          icon: 'assets/home/icon-password.svg',
-                          title: '密码管理',
-                          onTap: () {
-                            // Handle password management
-                          },
+                        Text(
+                          '上海吉舰嘉科技服务有限公司',
+                          style: TextStyle(
+                            color: Color(0xFF333333),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            height: 1.0,
+                          ),
                         ),
-                        const Divider(height: 1, color: Color(0xFFF0F0F0)),
-                        _buildMenuItem(
-                          icon: 'assets/home/icon-customer.svg',
-                          title: '客服电话',
-                          onTap: () {
-                            // Handle customer service
-                          },
+                        SizedBox(height: 14),
+                        Row(
+                          children: [
+                            SvgIcon(
+                              icon: 'assets/home/icon-user.svg',
+                              size: 14,
+                            ),
+                            SizedBox(width: 4),
+                            Text(
+                              '销售顾问 闻晨佳',
+                              style: TextStyle(
+                                color: Color(0xFF333333),
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
                         ),
-                        const Divider(height: 1, color: Color(0xFFF0F0F0)),
-                        _buildMenuItem(
-                          icon: 'assets/home/icon-logout.svg',
-                          title: '退出登录',
-                          onTap: () {
-                            // Handle logout
-                          },
-                          isLast: true,
+                        SizedBox(height: 4),
+                        Row(
+                          children: [
+                            SvgIcon(
+                              icon: 'assets/home/icon-phone.svg',
+                              size: 14,
+                            ),
+                            SizedBox(width: 4),
+                            Text(
+                              '13913380929',
+                              style: TextStyle(
+                                color: Color(0xFF333333),
+                                fontSize: 12,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
                   ),
-                ),
-                const SizedBox(height: 100), // Space for bottom nav
-              ],
+                  const SizedBox(height: 24),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 26.0),
+                    child: Material(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(6),
+                      child: Column(
+                        children: [
+                          menuItem(
+                            icon: 'assets/home/icon-password.svg',
+                            title: '密码管理',
+                            onTap: () {
+                              Navigator.pushNamed(context, AppRoutes.editPassword);
+                            },
+                          ),
+                          menuItem(
+                            icon: 'assets/home/icon-customer.svg',
+                            title: '客服电话',
+                            onTap: () {},
+                          ),
+                          menuItem(
+                            icon: 'assets/home/icon-logout.svg',
+                            title: '退出登录',
+                            onTap: _logout,
+                            isLast: true,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
+        bottomNavigationBar: const BottomNav(currentIndex: 2),
       ),
-      bottomNavigationBar: const CustomBottomNavBar(currentIndex: 2),
     );
   }
 
-  Widget _buildMenuItem({
+  Widget menuItem({
     required String icon,
     required String title,
     required VoidCallback onTap,
@@ -154,18 +154,15 @@ class MineScreen extends StatelessWidget {
   }) {
     return InkWell(
       onTap: onTap,
+      splashColor: Colors.grey.withValues(alpha: 0.1),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
         child: Row(
           children: [
-            SvgPicture.asset(
-              icon,
-              width: 20,
-              height: 20,
-              colorFilter: const ColorFilter.mode(
-                Color(0xFF333333),
-                BlendMode.srcIn,
-              ),
+            SvgIcon(
+              icon: icon,
+              size: 20,
+              color: const Color(0xFF333333),
             ),
             const SizedBox(width: 4),
             Text(

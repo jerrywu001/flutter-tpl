@@ -1,7 +1,6 @@
+import 'package:first_app/main.dart';
+import 'package:first_app/widgets/bottom_nav.dart';
 import 'package:flutter/material.dart';
-
-import '../../main.dart';
-import 'widgets/index.dart';
 
 class MessageScreen extends StatelessWidget {
   const MessageScreen({super.key});
@@ -10,7 +9,7 @@ class MessageScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        centerTitle: true,
         title: const Text('消息'),
       ),
       body: Center(
@@ -21,7 +20,7 @@ class MessageScreen extends StatelessWidget {
           child: const Text('消息页面 - 点击返回首页'),
         ),
       ),
-      bottomNavigationBar: const CustomBottomNavBar(currentIndex: 1),
+      bottomNavigationBar: const BottomNav(currentIndex: 1),
     );
   }
 }

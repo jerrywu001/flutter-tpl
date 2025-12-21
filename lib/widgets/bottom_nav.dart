@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../../main.dart';
 
-class CustomBottomNavBar extends StatelessWidget {
+class BottomNav extends StatelessWidget {
   final int currentIndex;
 
-  const CustomBottomNavBar({
+  const BottomNav({
     super.key,
     required this.currentIndex,
   });
@@ -15,7 +15,7 @@ class CustomBottomNavBar extends StatelessWidget {
     return BottomNavigationBar(
       backgroundColor: Colors.white,
       currentIndex: currentIndex,
-      selectedItemColor: Theme.of(context).colorScheme.primary,
+      selectedItemColor: const Color(0xFFA28071),
       unselectedItemColor: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.3),
       onTap: (index) {
         context.findAncestorStateOfType<MyHomePageState>()?.onItemTapped(index);
