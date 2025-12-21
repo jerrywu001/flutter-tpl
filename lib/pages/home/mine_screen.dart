@@ -56,7 +56,7 @@ class _MineScreenState extends State<MineScreen> {
                 children: [
                   const SizedBox(height: 72),
                   const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 26.0),
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -64,7 +64,7 @@ class _MineScreenState extends State<MineScreen> {
                           '上海吉舰嘉科技服务有限公司',
                           style: TextStyle(
                             color: Color(0xFF333333),
-                            fontSize: 18,
+                            fontSize: 20,
                             fontWeight: FontWeight.w600,
                             height: 1.0,
                           ),
@@ -81,7 +81,7 @@ class _MineScreenState extends State<MineScreen> {
                               '销售顾问 闻晨佳',
                               style: TextStyle(
                                 color: Color(0xFF333333),
-                                fontSize: 12,
+                                fontSize: 14,
                               ),
                             ),
                           ],
@@ -98,7 +98,7 @@ class _MineScreenState extends State<MineScreen> {
                               '13913380929',
                               style: TextStyle(
                                 color: Color(0xFF333333),
-                                fontSize: 12,
+                                fontSize: 14,
                               ),
                             ),
                           ],
@@ -106,14 +106,15 @@ class _MineScreenState extends State<MineScreen> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 16),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 26.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
                     child: Material(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(6),
                       child: Column(
                         children: [
+                          const SizedBox(height: 6),
                           menuItem(
                             icon: 'assets/home/icon-password.svg',
                             title: '密码管理',
@@ -132,6 +133,7 @@ class _MineScreenState extends State<MineScreen> {
                             onTap: _logout,
                             isLast: true,
                           ),
+                          const SizedBox(height: 6),
                         ],
                       ),
                     ),
@@ -156,7 +158,7 @@ class _MineScreenState extends State<MineScreen> {
       onTap: onTap,
       splashColor: Colors.grey.withValues(alpha: 0.1),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
         child: Row(
           children: [
             SvgIcon(
@@ -169,7 +171,7 @@ class _MineScreenState extends State<MineScreen> {
               title,
               style: const TextStyle(
                 color: Color(0xFF333333),
-                fontSize: 14,
+                fontSize: 16,
                 fontWeight: FontWeight.normal,
               ),
             ),

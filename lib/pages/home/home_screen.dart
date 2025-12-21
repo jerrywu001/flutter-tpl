@@ -1,5 +1,4 @@
 import 'package:first_app/config/routes.dart';
-import 'package:first_app/utils/tools.dart';
 import 'package:first_app/widgets/bottom_nav.dart';
 import 'package:flutter/material.dart';
 
@@ -13,20 +12,10 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _counter = 0;
 
-  void _incrementCounter() async {
-    final result = await showConfirm(
-      context,
-      title: '确认',
-      content: '是否确认增加计数器？',
-    );
-
-    if (!mounted || result != true) return;
-
+  void _incrementCounter() {
     setState(() {
       _counter++;
     });
-
-    showToast(context, 'Counter incremented');
   }
 
   @override

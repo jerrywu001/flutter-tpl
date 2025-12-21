@@ -55,71 +55,70 @@ class _DetailPageState extends State<DetailPage> {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(),
       child: Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(56.0),
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 200),
-          decoration: BoxDecoration(
-            color: _appBarBgColor,
-            // 当背景不透明时添加阴影
-            boxShadow: _appBarOpacity > 0.3
-                ? [
-                    const BoxShadow(
-                      color: Colors.black12,
-                      blurRadius: 4,
-                      offset: Offset(0, 2),
-                    ),
-                  ]
-                : [],
-          ),
-          child: AppBar(
-            backgroundColor: Colors.transparent,
-            elevation: 0,
-            systemOverlayStyle: SystemUiOverlayStyle(
-              statusBarColor: Colors.transparent,
-              statusBarIconBrightness: brightness,
+        extendBodyBehindAppBar: true,
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(56.0),
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 200),
+            decoration: BoxDecoration(
+              color: _appBarBgColor,
+              // 当背景不透明时添加阴影
+              boxShadow: _appBarOpacity > 0.3
+                  ? [
+                      const BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 4,
+                        offset: Offset(0, 2),
+                      ),
+                    ]
+                  : [],
             ),
-            title: AnimatedDefaultTextStyle(
-              duration: const Duration(milliseconds: 200),
-              style: TextStyle(
-                color: _appTextColor,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+            child: AppBar(
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+              systemOverlayStyle: SystemUiOverlayStyle(
+                statusBarColor: Colors.transparent,
+                statusBarIconBrightness: brightness,
               ),
-              child: const Text('滚动渐变效果'),
+              title: AnimatedDefaultTextStyle(
+                duration: const Duration(milliseconds: 200),
+                style: TextStyle(
+                  color: _appTextColor,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+                child: const Text('滚动渐变效果'),
+              ),
+              iconTheme: IconThemeData(color: _appTextColor),
+              actions: [
+                IconButton(icon: const Icon(Icons.search), onPressed: () {}),
+                IconButton(icon: const Icon(Icons.more_vert), onPressed: () {}),
+              ],
             ),
-            iconTheme: IconThemeData(color: _appTextColor),
-            actions: [
-              IconButton(icon: const Icon(Icons.search), onPressed: () {}),
-              IconButton(icon: const Icon(Icons.more_vert), onPressed: () {}),
-            ],
           ),
         ),
-      ),
-      body: CustomScrollView(
-        controller: _scrollController,
-        slivers: [
-          SliverToBoxAdapter(
-            child: Container(
-              height: 300,
-              decoration: const BoxDecoration(
-                // 渐变色效果方式
-                // gradient: LinearGradient(
-                //   begin: Alignment.topCenter,
-                //   end: Alignment.bottomCenter,
-                //   colors: [Color.fromARGB(255, 84, 159, 219), Color.fromARGB(255, 138, 75, 247)],
-                // ),
-                // 图片背景方式
-                image: DecorationImage(
-                  image: AssetImage('assets/home/bg.png'),
-                  fit: BoxFit.cover,
+        body: CustomScrollView(
+          controller: _scrollController,
+          slivers: [
+            SliverToBoxAdapter(
+              child: Container(
+                // height: 300,
+                decoration: const BoxDecoration(
+                  // 渐变色效果方式
+                  // gradient: LinearGradient(
+                  //   begin: Alignment.topCenter,
+                  //   end: Alignment.bottomCenter,
+                  //   colors: [Color.fromARGB(255, 84, 159, 219), Color.fromARGB(255, 138, 75, 247)],
+                  // ),
+                  // 图片背景方式
+                  image: DecorationImage(
+                    image: AssetImage('assets/home/bg.png'),
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
-              child: Center(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    const SizedBox(height: 80),
                     Icon(
                       Icons.landscape,
                       size: 80,
@@ -142,82 +141,82 @@ class _DetailPageState extends State<DetailPage> {
                         fontSize: 16,
                       ),
                     ),
+                    const SizedBox(height: 20),
                   ],
                 ),
               ),
             ),
-          ),
 
-          SliverList(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) {
-                final isLastItem = index == 19;
-                return SafeArea(
-                  top: false,
-                  bottom: isLastItem,
-                  child: Container(
-                    color: Colors.white,
-                    child: Column(
-                      children: [
-                        Card(
-                          margin: const EdgeInsets.symmetric(
-                            horizontal: 16,
-                            vertical: 8,
-                          ),
-                          elevation: 2,
-                          child: ListTile(
-                            leading: CircleAvatar(
-                              backgroundColor: Colors.blue.shade100,
-                              child: Text(
-                                '${index + 1}',
-                                style: TextStyle(
-                                  color: Colors.blue.shade700,
-                                  fontWeight: FontWeight.bold,
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) {
+                  final isLastItem = index == 19;
+                  return SafeArea(
+                    top: false,
+                    bottom: isLastItem,
+                    child: Container(
+                      color: Colors.white,
+                      child: Column(
+                        children: [
+                          Card(
+                            margin: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 8,
+                            ),
+                            elevation: 2,
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                backgroundColor: Colors.blue.shade100,
+                                child: Text(
+                                  '${index + 1}',
+                                  style: TextStyle(
+                                    color: Colors.blue.shade700,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
                               ),
-                            ),
-                            title: Text(
-                              '列表项目 ${index + 1}',
-                              style: const TextStyle(fontWeight: FontWeight.w600),
-                            ),
-                            subtitle: Text(
-                              '向上滚动页面，AppBar 会从透明变为白色背景',
-                              style: TextStyle(
-                                fontSize: 13,
-                                color: Colors.grey.shade600,
+                              title: Text(
+                                '列表项目 ${index + 1}',
+                                style: const TextStyle(fontWeight: FontWeight.w600),
                               ),
+                              subtitle: Text(
+                                '向上滚动页面，AppBar 会从透明变为白色背景',
+                                style: TextStyle(
+                                  fontSize: 13,
+                                  color: Colors.grey.shade600,
+                                ),
+                              ),
+                              trailing: Icon(
+                                Icons.arrow_forward_ios,
+                                size: 16,
+                                color: Colors.grey.shade400,
+                              ),
+                              onTap: () {
+                                showToast(context, '点击了项目 ${index + 1}');
+                              },
                             ),
-                            trailing: Icon(
-                              Icons.arrow_forward_ios,
-                              size: 16,
-                              color: Colors.grey.shade400,
-                            ),
-                            onTap: () {
-                              showToast(context, '点击了项目 ${index + 1}');
-                            },
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                );
-            },
-            childCount: 20
-          ),
-        )],
-      ),
-      floatingActionButton: _scrollOffset > 200 ? FloatingActionButton(
-        onPressed: () {
-          // 滚动到顶部
-          _scrollController.animateTo(
-            0,
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.easeInOut,
-          );
-        },
-        tooltip: '回到顶部',
-        child: const Icon(Icons.arrow_upward),
-      ) : null,
+                  );
+              },
+              childCount: 20
+            ),
+          )],
+        ),
+        floatingActionButton: _scrollOffset > 200 ? FloatingActionButton(
+          onPressed: () {
+            // 滚动到顶部
+            _scrollController.animateTo(
+              0,
+              duration: const Duration(milliseconds: 500),
+              curve: Curves.easeInOut,
+            );
+          },
+          tooltip: '回到顶部',
+          child: const Icon(Icons.arrow_upward),
+        ) : null,
       ),
     );
   }
