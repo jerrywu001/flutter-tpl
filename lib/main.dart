@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() async {
-    final result = await Tools.showConfirm(
+    final result = await showConfirm(
       context,
       title: '确认',
       content: '是否确认增加计数器？',
@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter++;
     });
 
-    Tools.showMessage(context, 'Counter incremented');
+    showToast(context, 'Counter incremented');
   }
 
   @override
