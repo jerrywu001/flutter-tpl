@@ -1,0 +1,20 @@
+{
+  "author": "",
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "multer": "^2.0.2",
+    "nodemon": "^3.1.11"
+  },
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.cjs",
+  "name": "mocks",
+  "scripts": {
+    "start": "nodemon mocks/index.cjs"
+  },
+  "type": "module",
+  "version": "1.0.0"
+}

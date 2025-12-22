@@ -1,0 +1,290 @@
+[
+  {
+    "id": "demand-001",
+    "taskNo": "TASK20250101001",
+    "parentId": "parent-001",
+    "children": [
+      {
+        "childId": "child-001",
+        "childName": "小明",
+        "childAvatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=xiaoming",
+        "specialNote": "孩子比较活泼，需要多耐心"
+      }
+    ],
+    "addressId": "addr-001",
+    "addressDetail": "北京市朝阳区建国路88号SOHO现代城A座1501",
+    "serviceItems": [
+      {
+        "id": "item-001",
+        "name": "作业辅导",
+        "color": "#FF5733"
+      }
+    ],
+    "serviceType": "HOMEWORK",
+    "serviceDate": "2025-01-15",
+    "startTime": "14:00",
+    "endTime": "16:00",
+    "hours": 2,
+    "status": "PENDING_ASSIGN",
+    "matchStatus": "MATCHING",
+    "companionId": null,
+    "companionName": null,
+    "serviceContent": "辅导数学作业",
+    "remark": "请准时到达",
+    "createdAt": "2025-01-10T10:30:00.000Z"
+  },
+  {
+    "id": "demand-002",
+    "taskNo": "TASK20250101002",
+    "parentId": "parent-001",
+    "children": [
+      {
+        "childId": "child-002",
+        "childName": "小红",
+        "childAvatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=xiaohong",
+        "specialNote": "喜欢画画和读绘本"
+      }
+    ],
+    "addressId": "addr-001",
+    "addressDetail": "北京市朝阳区建国路88号SOHO现代城A座1501",
+    "serviceItems": [
+      {
+        "id": "item-002",
+        "name": "日常陪伴",
+        "color": "#33A1FF"
+      },
+      {
+        "id": "item-003",
+        "name": "绘本阅读",
+        "color": "#9B59B6"
+      }
+    ],
+    "serviceType": "ACCOMPANY",
+    "serviceDate": "2025-01-16",
+    "startTime": "09:00",
+    "endTime": "12:00",
+    "hours": 3,
+    "status": "PENDING_ACCEPT",
+    "matchStatus": "MATCHED",
+    "companionId": "comp-003",
+    "companionName": "小张老师",
+    "serviceContent": "日常陪伴，绘本阅读",
+    "remark": "",
+    "createdAt": "2025-01-11T08:00:00.000Z"
+  },
+  {
+    "id": "demand-003",
+    "taskNo": "TASK20250101003",
+    "parentId": "parent-001",
+    "children": [
+      {
+        "childId": "child-001",
+        "childName": "小明",
+        "childAvatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=xiaoming",
+        "specialNote": "英语基础一般，需要耐心辅导"
+      }
+    ],
+    "addressId": "addr-002",
+    "addressDetail": "北京市海淀区中关村大街1号海龙大厦8层",
+    "serviceItems": [
+      {
+        "id": "item-004",
+        "name": "英语辅导",
+        "color": "#2ECC71"
+      }
+    ],
+    "serviceType": "TUTORING",
+    "serviceDate": "2025-01-17",
+    "startTime": "15:00",
+    "endTime": "17:00",
+    "hours": 2,
+    "status": "ACCEPTED",
+    "matchStatus": "ASSIGNED",
+    "companionId": "comp-002",
+    "companionName": "小陈老师",
+    "serviceContent": "英语单词听写和阅读理解",
+    "remark": "孩子英语基础一般",
+    "createdAt": "2025-01-12T14:20:00.000Z"
+  },
+  {
+    "id": "demand-004",
+    "taskNo": "TASK20250101004",
+    "parentId": "parent-001",
+    "children": [
+      {
+        "childId": "child-003",
+        "childName": "小刚",
+        "childAvatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=xiaogang",
+        "specialNote": "学校在建国门外大街"
+      }
+    ],
+    "addressId": "addr-001",
+    "addressDetail": "北京市朝阳区建国路88号SOHO现代城A座1501",
+    "serviceItems": [
+      {
+        "id": "item-005",
+        "name": "接送服务",
+        "color": "#F39C12"
+      }
+    ],
+    "serviceType": "PICKUP",
+    "serviceDate": "2025-01-18",
+    "startTime": "16:30",
+    "endTime": "17:30",
+    "hours": 1,
+    "status": "IN_PROGRESS",
+    "matchStatus": "ASSIGNED",
+    "companionId": "comp-005",
+    "companionName": "小刘老师",
+    "serviceContent": "放学接送",
+    "remark": "学校在建国门外大街",
+    "createdAt": "2025-01-13T09:00:00.000Z"
+  },
+  {
+    "id": "demand-005",
+    "taskNo": "TASK20250101005",
+    "parentId": "parent-001",
+    "children": [
+      {
+        "childId": "child-001",
+        "childName": "小明",
+        "childAvatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=xiaoming",
+        "specialNote": ""
+      }
+    ],
+    "addressId": "addr-001",
+    "addressDetail": "北京市朝阳区建国路88号SOHO现代城A座1501",
+    "serviceItems": [
+      {
+        "id": "item-001",
+        "name": "作业辅导",
+        "color": "#FF5733"
+      }
+    ],
+    "serviceType": "HOMEWORK",
+    "serviceDate": "2025-01-10",
+    "startTime": "14:00",
+    "endTime": "16:00",
+    "hours": 2,
+    "status": "COMPLETED",
+    "matchStatus": "ASSIGNED",
+    "companionId": "comp-001",
+    "companionName": "小王老师",
+    "serviceContent": "语文作业辅导",
+    "remark": "",
+    "createdAt": "2025-01-05T10:00:00.000Z"
+  },
+  {
+    "id": "demand-006",
+    "taskNo": "TASK20250101006",
+    "parentId": "parent-001",
+    "children": [
+      {
+        "childId": "child-002",
+        "childName": "小红",
+        "childAvatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=xiaohong",
+        "specialNote": "喜欢画画"
+      }
+    ],
+    "addressId": "addr-001",
+    "addressDetail": "北京市朝阳区建国路88号SOHO现代城A座1501",
+    "serviceItems": [
+      {
+        "id": "item-006",
+        "name": "绘画培养",
+        "color": "#E74C3C"
+      }
+    ],
+    "serviceType": "INTEREST",
+    "serviceDate": "2025-01-08",
+    "startTime": "10:00",
+    "endTime": "12:00",
+    "hours": 2,
+    "status": "COMPLETED",
+    "matchStatus": "ASSIGNED",
+    "companionId": "comp-003",
+    "companionName": "小张老师",
+    "serviceContent": "绘画兴趣培养",
+    "remark": "",
+    "createdAt": "2025-01-03T11:30:00.000Z"
+  },
+  {
+    "id": "demand-007",
+    "taskNo": "TASK20250101007",
+    "parentId": "parent-001",
+    "children": [
+      {
+        "childId": "child-003",
+        "childName": "小刚",
+        "childAvatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=xiaogang",
+        "specialNote": ""
+      }
+    ],
+    "addressId": "addr-002",
+    "addressDetail": "北京市海淀区中关村大街1号海龙大厦8层",
+    "serviceItems": [
+      {
+        "id": "item-002",
+        "name": "日常陪伴",
+        "color": "#33A1FF"
+      }
+    ],
+    "serviceType": "ACCOMPANY",
+    "serviceDate": "2025-01-05",
+    "startTime": "09:00",
+    "endTime": "11:00",
+    "hours": 2,
+    "status": "CANCELLED",
+    "matchStatus": "MATCHING",
+    "companionId": null,
+    "companionName": null,
+    "serviceContent": "周末陪伴",
+    "remark": "临时有事取消",
+    "createdAt": "2025-01-01T08:00:00.000Z"
+  },
+  {
+    "id": "demand-008",
+    "taskNo": "TASK20250115008",
+    "parentId": "parent-001",
+    "children": [
+      {
+        "childId": "child-001",
+        "childName": "小明",
+        "childAvatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=xiaoming",
+        "specialNote": "数学需要加强"
+      },
+      {
+        "childId": "child-002",
+        "childName": "小红",
+        "childAvatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=xiaohong",
+        "specialNote": "喜欢互动游戏"
+      }
+    ],
+    "addressId": "addr-001",
+    "addressDetail": "北京市朝阳区建国路88号SOHO现代城A座1501",
+    "serviceItems": [
+      {
+        "id": "item-001",
+        "name": "作业辅导",
+        "color": "#FF5733"
+      },
+      {
+        "id": "item-002",
+        "name": "日常陪伴",
+        "color": "#33A1FF"
+      }
+    ],
+    "serviceType": "HOMEWORK",
+    "serviceDate": "2025-01-20",
+    "startTime": "14:00",
+    "endTime": "17:00",
+    "hours": 3,
+    "status": "PENDING_ASSIGN",
+    "matchStatus": "MATCHING",
+    "companionId": null,
+    "companionName": null,
+    "serviceContent": "作业辅导和日常陪伴",
+    "remark": "两个孩子一起",
+    "createdAt": "2025-01-15T09:00:00.000Z"
+  }
+]

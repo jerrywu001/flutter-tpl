@@ -1,0 +1,29 @@
+[
+  {
+    "id": "child-001",
+    "nickname": "小明",
+    "gender": "MALE",
+    "birthday": "2018-06-15",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=child1",
+    "remark": "喜欢数学和科学",
+    "age": 6
+  },
+  {
+    "id": "child-002",
+    "nickname": "小红",
+    "gender": "FEMALE",
+    "birthday": "2019-03-20",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=child2",
+    "remark": "喜欢画画和音乐",
+    "age": 5
+  },
+  {
+    "id": "child-003",
+    "nickname": "小刚",
+    "gender": "MALE",
+    "birthday": "2017-09-10",
+    "avatar": "https://api.dicebear.com/7.x/adventurer/svg?seed=child3",
+    "remark": "喜欢运动",
+    "age": 7
+  }
+]

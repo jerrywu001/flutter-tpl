@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "generate-mock-env",
+      "type": "shell",
+      "command": "node scripts/run-mock.js --env-only",
+      "problemMatcher": []
+    },
+    {
+      "label": "start-mock-server",
+      "type": "npm",
+      "script": "server",
+      "isBackground": true,
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "^$",
+          "file": 1,
+          "location": 2,
+          "message": 3
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".*",
+          "endsPattern": ".*running.*"
+        }
+      }
+    },
+    {
+      "label": "prepare-mock",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "generate-mock-env",
+        "start-mock-server"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}

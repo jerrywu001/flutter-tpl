@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:ybx_parent_client/api/request/index.dart';
+import 'package:ybx_parent_client/utils/index.dart';
 
 import 'config/routes.dart';
 import 'pages/home/index.dart';
 
 void main() {
+  HttpRequest.init();
   runApp(const MyApp());
 }
 
@@ -18,6 +21,10 @@ class MyApp extends StatelessWidget {
       //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       // ),
       initialRoute: AppRoutes.home,
+      builder: (context, child) {
+        SizeFit.initialize(context);
+        return child ?? const SizedBox.shrink();
+      },
       routes: {
         AppRoutes.home: (context) =>
             const MyHomePage(title: 'Flutter Demo Home Page'),

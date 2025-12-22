@@ -1,6 +1,6 @@
-import 'package:first_app/pages/detail.dart';
-import 'package:first_app/pages/edit_password.dart';
 import 'package:flutter/material.dart';
+import 'package:ybx_parent_client/pages/detail.dart';
+import 'package:ybx_parent_client/pages/edit_password.dart';
 
 class AppRoutes {
   static const String home = '/';

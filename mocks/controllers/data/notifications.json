@@ -1,0 +1,122 @@
+[
+  {
+    "id": "notif-001",
+    "notificationType": "SYSTEM",
+    "title": "系统升级通知",
+    "content": "亲爱的用户，我们将于今晚22:00-24:00进行系统升级维护，届时可能会影响部分功能使用，请提前安排好您的时间。",
+    "extraData": null,
+    "isRead": false,
+    "readAt": null,
+    "actionType": null,
+    "actionStatus": null,
+    "createdAt": "2025-01-04T10:00:00.000Z"
+  },
+  {
+    "id": "notif-002",
+    "notificationType": "TASK",
+    "title": "任务即将开始",
+    "content": "您预约的陪伴服务将于明天下午14:00开始，陪伴官小李将准时到达，请做好准备。",
+    "extraData": { "taskId": "task-001", "companionName": "小李" },
+    "isRead": true,
+    "readAt": "2025-01-03T15:30:00.000Z",
+    "actionType": null,
+    "actionStatus": null,
+    "createdAt": "2025-01-03T14:00:00.000Z"
+  },
+  {
+    "id": "notif-003",
+    "notificationType": "ORDER",
+    "title": "订单支付成功",
+    "content": "您的订单 ORD20250103001 已支付成功，金额¥288.00，感谢您的信任与支持！",
+    "extraData": { "orderId": "order-001", "orderNo": "ORD20250103001", "amount": 288.00 },
+    "isRead": true,
+    "readAt": "2025-01-03T12:00:00.000Z",
+    "actionType": null,
+    "actionStatus": null,
+    "createdAt": "2025-01-03T11:30:00.000Z"
+  },
+  {
+    "id": "notif-004",
+    "notificationType": "FINANCE",
+    "title": "充值成功",
+    "content": "您已成功充值500.00元，当前余额800.00元。",
+    "extraData": { "rechargeAmount": 500.00, "balance": 800.00 },
+    "isRead": false,
+    "readAt": null,
+    "actionType": null,
+    "actionStatus": null,
+    "createdAt": "2025-01-02T16:00:00.000Z"
+  },
+  {
+    "id": "notif-005",
+    "notificationType": "TASK",
+    "title": "服务已完成",
+    "content": "陪伴官小王已完成今天的服务任务，请您对本次服务进行评价。",
+    "extraData": { "taskId": "task-002", "companionName": "小王", "orderId": "order-002" },
+    "isRead": false,
+    "readAt": null,
+    "actionType": "REVIEW",
+    "actionStatus": "PENDING",
+    "createdAt": "2025-01-02T18:00:00.000Z"
+  },
+  {
+    "id": "notif-006",
+    "notificationType": "SYSTEM",
+    "title": "新年福利活动",
+    "content": "新年福利来袭！充值满1000元送100元，活动时间1月1日-1月31日，快来参与吧！",
+    "extraData": { "activityId": "act-001" },
+    "isRead": true,
+    "readAt": "2025-01-01T10:00:00.000Z",
+    "actionType": null,
+    "actionStatus": null,
+    "createdAt": "2025-01-01T08:00:00.000Z"
+  },
+  {
+    "id": "notif-007",
+    "notificationType": "TASK",
+    "title": "陪伴官邀请确认",
+    "content": "陪伴官小张希望成为您的专属陪伴官，是否接受邀请？",
+    "extraData": { "companionId": "comp-003", "companionName": "小张" },
+    "isRead": false,
+    "readAt": null,
+    "actionType": "INVITE",
+    "actionStatus": "PENDING",
+    "createdAt": "2025-01-04T09:00:00.000Z"
+  },
+  {
+    "id": "notif-008",
+    "notificationType": "ORDER",
+    "title": "订单已取消",
+    "content": "您的订单 ORD20250102001 已取消，退款将在1-3个工作日内原路返回。",
+    "extraData": { "orderId": "order-003", "orderNo": "ORD20250102001" },
+    "isRead": true,
+    "readAt": "2025-01-02T14:00:00.000Z",
+    "actionType": null,
+    "actionStatus": null,
+    "createdAt": "2025-01-02T13:00:00.000Z"
+  },
+  {
+    "id": "notif-009",
+    "notificationType": "FINANCE",
+    "title": "消费通知",
+    "content": "您本次服务消费128.00元，剩余余额672.00元。",
+    "extraData": { "consumeAmount": 128.00, "balance": 672.00 },
+    "isRead": false,
+    "readAt": null,
+    "actionType": null,
+    "actionStatus": null,
+    "createdAt": "2025-01-03T17:00:00.000Z"
+  },
+  {
+    "id": "notif-010",
+    "notificationType": "TASK",
+    "title": "任务时间变更",
+    "content": "您预约的服务时间已变更为1月5日下午15:00，请知悉。",
+    "extraData": { "taskId": "task-003", "newTime": "2025-01-05T15:00:00.000Z" },
+    "isRead": false,
+    "readAt": null,
+    "actionType": null,
+    "actionStatus": null,
+    "createdAt": "2025-01-04T08:00:00.000Z"
+  }
+]

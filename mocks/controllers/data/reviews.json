@@ -1,0 +1,158 @@
+[
+  {
+    "id": "review-001",
+    "reviewType": "SERVICE",
+    "orderId": "order-001",
+    "taskId": "task-001",
+    "rating": 5,
+    "attitudeScore": 5,
+    "punctualityScore": 5,
+    "professionalismScore": 5,
+    "content": "小李老师非常专业，孩子很喜欢，服务态度也很好，准时到达，强烈推荐！",
+    "images": ["https://example.com/review/img1.jpg", "https://example.com/review/img2.jpg"],
+    "tags": ["服务态度好", "很有耐心", "专业能力强"],
+    "isAnonymous": false,
+    "replyContent": "感谢您的认可，我们会继续努力！",
+    "repliedAt": "2025-01-03T16:00:00.000Z",
+    "createdAt": "2025-01-03T14:00:00.000Z",
+    "reviewer": {
+      "id": "parent-001",
+      "nickname": "宝宝妈妈",
+      "avatar": "https://example.com/avatar/parent1.jpg"
+    },
+    "companion": {
+      "id": "comp-001",
+      "realName": "小李",
+      "avatar": "https://example.com/avatar/comp1.jpg"
+    },
+    "child": {
+      "id": "child-001",
+      "nickname": "小明",
+      "avatar": "https://example.com/avatar/child1.jpg"
+    }
+  },
+  {
+    "id": "review-002",
+    "reviewType": "SERVICE",
+    "orderId": "order-002",
+    "taskId": "task-002",
+    "rating": 4,
+    "attitudeScore": 5,
+    "punctualityScore": 4,
+    "professionalismScore": 4,
+    "content": "整体服务不错，孩子玩得很开心，下次还会预约。",
+    "images": [],
+    "tags": ["服务态度好", "很有耐心"],
+    "isAnonymous": false,
+    "replyContent": null,
+    "repliedAt": null,
+    "createdAt": "2025-01-02T18:00:00.000Z",
+    "reviewer": {
+      "id": "parent-002",
+      "nickname": "乐乐爸爸",
+      "avatar": "https://example.com/avatar/parent2.jpg"
+    },
+    "companion": {
+      "id": "comp-002",
+      "realName": "小王",
+      "avatar": "https://example.com/avatar/comp2.jpg"
+    },
+    "child": {
+      "id": "child-002",
+      "nickname": "乐乐",
+      "avatar": "https://example.com/avatar/child2.jpg"
+    }
+  },
+  {
+    "id": "review-003",
+    "reviewType": "SERVICE",
+    "orderId": "order-003",
+    "taskId": "task-003",
+    "rating": 5,
+    "attitudeScore": 5,
+    "punctualityScore": 5,
+    "professionalismScore": 5,
+    "content": "陪伴官很有亲和力，孩子特别喜欢，作业辅导也很耐心。",
+    "images": ["https://example.com/review/img3.jpg"],
+    "tags": ["专业能力强", "很有耐心", "孩子喜欢"],
+    "isAnonymous": true,
+    "replyContent": null,
+    "repliedAt": null,
+    "createdAt": "2025-01-01T20:00:00.000Z",
+    "reviewer": {
+      "id": "parent-003",
+      "nickname": "匿名用户",
+      "avatar": null
+    },
+    "companion": {
+      "id": "comp-001",
+      "realName": "小李",
+      "avatar": "https://example.com/avatar/comp1.jpg"
+    },
+    "child": {
+      "id": "child-003",
+      "nickname": "小红",
+      "avatar": "https://example.com/avatar/child3.jpg"
+    }
+  },
+  {
+    "id": "review-004",
+    "reviewType": "CHILD",
+    "orderId": "order-001",
+    "taskId": "task-001",
+    "rating": 5,
+    "attitudeScore": null,
+    "punctualityScore": null,
+    "professionalismScore": null,
+    "content": "小明很乖巧，学习能力强，配合度非常高！",
+    "images": [],
+    "tags": ["配合度高", "专注力好", "活泼可爱"],
+    "isAnonymous": false,
+    "replyContent": null,
+    "repliedAt": null,
+    "createdAt": "2025-01-03T15:00:00.000Z",
+    "reviewer": {
+      "id": "comp-001",
+      "nickname": "小李",
+      "avatar": "https://example.com/avatar/comp1.jpg"
+    },
+    "companion": null,
+    "child": {
+      "id": "child-001",
+      "nickname": "小明",
+      "avatar": "https://example.com/avatar/child1.jpg"
+    }
+  },
+  {
+    "id": "review-005",
+    "reviewType": "SERVICE",
+    "orderId": "order-004",
+    "taskId": "task-004",
+    "rating": 3,
+    "attitudeScore": 4,
+    "punctualityScore": 2,
+    "professionalismScore": 3,
+    "content": "服务还可以，但是迟到了10分钟，希望能改进。",
+    "images": [],
+    "tags": [],
+    "isAnonymous": false,
+    "replyContent": "非常抱歉给您带来不好的体验，我们会加强管理，确保准时到达。",
+    "repliedAt": "2025-01-01T12:00:00.000Z",
+    "createdAt": "2025-01-01T10:00:00.000Z",
+    "reviewer": {
+      "id": "parent-004",
+      "nickname": "阳阳妈妈",
+      "avatar": "https://example.com/avatar/parent4.jpg"
+    },
+    "companion": {
+      "id": "comp-003",
+      "realName": "小张",
+      "avatar": "https://example.com/avatar/comp3.jpg"
+    },
+    "child": {
+      "id": "child-004",
+      "nickname": "阳阳",
+      "avatar": "https://example.com/avatar/child4.jpg"
+    }
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "tag-001",
+    "name": "有育儿经验",
+    "category": "EXPERIENCE",
+    "color": "#FF6B35",
+    "sortOrder": 1,
+    "isActive": true,
+    "usageCount": 128,
+    "createdAt": "2024-12-01T10:00:00.000Z"
+  },
+  {
+    "id": "tag-002",
+    "name": "耐心负责",
+    "category": "PERSONALITY",
+    "color": "#4CAF50",
+    "sortOrder": 2,
+    "isActive": true,
+    "usageCount": 95,
+    "createdAt": "2024-12-01T10:00:00.000Z"
+  },
+  {
+    "id": "tag-003",
+    "name": "细心温柔",
+    "category": "PERSONALITY",
+    "color": "#E91E63",
+    "sortOrder": 3,
+    "isActive": true,
+    "usageCount": 87,
+    "createdAt": "2024-12-02T10:00:00.000Z"
+  },
+  {
+    "id": "tag-004",
+    "name": "擅长沟通",
+    "category": "SKILL",
+    "color": "#2196F3",
+    "sortOrder": 4,
+    "isActive": true,
+    "usageCount": 72,
+    "createdAt": "2024-12-03T10:00:00.000Z"
+  },
+  {
+    "id": "tag-005",
+    "name": "作业辅导",
+    "category": "SKILL",
+    "color": "#9C27B0",
+    "sortOrder": 5,
+    "isActive": true,
+    "usageCount": 156,
+    "createdAt": "2024-12-04T10:00:00.000Z"
+  },
+  {
+    "id": "tag-006",
+    "name": "英语好",
+    "category": "SKILL",
+    "color": "#00BCD4",
+    "sortOrder": 6,
+    "isActive": true,
+    "usageCount": 63,
+    "createdAt": "2024-12-05T10:00:00.000Z"
+  },
+  {
+    "id": "tag-007",
+    "name": "活泼开朗",
+    "category": "PERSONALITY",
+    "color": "#FF9800",
+    "sortOrder": 7,
+    "isActive": true,
+    "usageCount": 54,
+    "createdAt": "2024-12-06T10:00:00.000Z"
+  },
+  {
+    "id": "tag-008",
+    "name": "带娃经验丰富",
+    "category": "EXPERIENCE",
+    "color": "#795548",
+    "sortOrder": 8,
+    "isActive": true,
+    "usageCount": 89,
+    "createdAt": "2024-12-07T10:00:00.000Z"
+  },
+  {
+    "id": "tag-009",
+    "name": "艺术特长",
+    "category": "SKILL",
+    "color": "#673AB7",
+    "sortOrder": 9,
+    "isActive": true,
+    "usageCount": 31,
+    "createdAt": "2024-12-08T10:00:00.000Z"
+  },
+  {
+    "id": "tag-010",
+    "name": "运动达人",
+    "category": "SKILL",
+    "color": "#F44336",
+    "sortOrder": 10,
+    "isActive": true,
+    "usageCount": 42,
+    "createdAt": "2024-12-09T10:00:00.000Z"
+  },
+  {
+    "id": "tag-011",
+    "name": "认证陪伴官",
+    "category": "EXPERIENCE",
+    "color": "#3F51B5",
+    "sortOrder": 11,
+    "isActive": true,
+    "usageCount": 200,
+    "createdAt": "2024-12-10T10:00:00.000Z"
+  },
+  {
+    "id": "tag-012",
+    "name": "守时靠谱",
+    "category": "PERSONALITY",
+    "color": "#009688",
+    "sortOrder": 12,
+    "isActive": true,
+    "usageCount": 78,
+    "createdAt": "2024-12-11T10:00:00.000Z"
+  }
+]

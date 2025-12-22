@@ -1,0 +1,14 @@
+[
+  {
+    "clientId": "tenant1",
+    "tenantName": "智慧分账系统"
+  },
+  {
+    "clientId": "tenant2",
+    "tenantName": "企业管理系统"
+  },
+  {
+    "clientId": "tenant3",
+    "tenantName": "销售管理平台"
+  }
+]

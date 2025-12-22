@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "llvm-vs-code-extensions.vscode-clangd",
+    "circlecodesolution.ccs-flutter-color",
+    "dart-code.flutter",
+    "dart-code.dart-code",
+    "dart-vsc.code-dart",
+    "fwcd.kotlin",
+    "nash.awesome-flutter-snippets"
+  ]
+}

@@ -1,9 +1,9 @@
-import 'package:first_app/config/routes.dart';
-import 'package:first_app/utils/tools.dart';
-import 'package:first_app/widgets/bottom_nav.dart';
-import 'package:first_app/widgets/svg_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:ybx_parent_client/config/routes.dart';
+import 'package:ybx_parent_client/utils/tools.dart';
+import 'package:ybx_parent_client/widgets/bottom_nav.dart';
+import 'package:ybx_parent_client/widgets/svg_icon.dart';
 
 class MineScreen extends StatefulWidget {
   const MineScreen({super.key});
@@ -27,17 +27,20 @@ class _MineScreenState extends State<MineScreen> {
 
   @override
   Widget build(BuildContext context) {
+    const overlayStyle = SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+      statusBarBrightness: Brightness.light,
+    );
+
     return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: const SystemUiOverlayStyle(),
+      value: overlayStyle,
       child: Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          systemOverlayStyle: const SystemUiOverlayStyle(
-            statusBarColor: Colors.transparent,
-            statusBarIconBrightness: Brightness.dark,
-          ),
+          systemOverlayStyle: overlayStyle,
         ),
         body: Stack(
           children: [
@@ -55,50 +58,50 @@ class _MineScreenState extends State<MineScreen> {
               child: Column(
                 children: [
                   const SizedBox(height: 72),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 32.rpx),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           '上海吉舰嘉科技服务有限公司',
                           style: TextStyle(
-                            color: Color(0xFF333333),
-                            fontSize: 20,
+                            color: const Color(0xFF333333),
+                            fontSize: 36.rpx,
                             fontWeight: FontWeight.w600,
                             height: 1.0,
                           ),
                         ),
-                        SizedBox(height: 14),
+                        SizedBox(height: 28.rpx),
                         Row(
                           children: [
                             SvgIcon(
                               icon: 'assets/home/icon-user.svg',
-                              size: 14,
+                              size: 28.rpx,
                             ),
-                            SizedBox(width: 4),
+                            SizedBox(width: 8.rpx),
                             Text(
                               '销售顾问 闻晨佳',
                               style: TextStyle(
-                                color: Color(0xFF333333),
-                                fontSize: 14,
+                                color: const Color(0xFF333333),
+                                fontSize: 24.rpx,
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(height: 4),
+                        SizedBox(height: 8.rpx),
                         Row(
                           children: [
                             SvgIcon(
                               icon: 'assets/home/icon-phone.svg',
-                              size: 14,
+                              size: 28.rpx,
                             ),
-                            SizedBox(width: 4),
+                            SizedBox(width: 8.rpx),
                             Text(
                               '13913380929',
                               style: TextStyle(
-                                color: Color(0xFF333333),
-                                fontSize: 14,
+                                color: const Color(0xFF333333),
+                                fontSize: 24.rpx,
                               ),
                             ),
                           ],
@@ -106,20 +109,23 @@ class _MineScreenState extends State<MineScreen> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 16),
+                  SizedBox(height: 32.rpx),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    padding: EdgeInsets.symmetric(horizontal: 32.rpx),
                     child: Material(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(6),
+                      borderRadius: BorderRadius.circular(12.rpx),
                       child: Column(
                         children: [
-                          const SizedBox(height: 6),
+                          SizedBox(height: 12.rpx),
                           menuItem(
                             icon: 'assets/home/icon-password.svg',
                             title: '密码管理',
                             onTap: () {
-                              Navigator.pushNamed(context, AppRoutes.editPassword);
+                              Navigator.pushNamed(
+                                context,
+                                AppRoutes.editPassword,
+                              );
                             },
                           ),
                           menuItem(
@@ -133,7 +139,7 @@ class _MineScreenState extends State<MineScreen> {
                             onTap: _logout,
                             isLast: true,
                           ),
-                          const SizedBox(height: 6),
+                          SizedBox(height: 12.rpx),
                         ],
                       ),
                     ),
@@ -158,27 +164,23 @@ class _MineScreenState extends State<MineScreen> {
       onTap: onTap,
       splashColor: Colors.grey.withValues(alpha: 0.1),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+        padding: EdgeInsets.symmetric(horizontal: 32.rpx, vertical: 24.rpx),
         child: Row(
           children: [
-            SvgIcon(
-              icon: icon,
-              size: 20,
-              color: const Color(0xFF333333),
-            ),
-            const SizedBox(width: 4),
+            SvgIcon(icon: icon, size: 36.rpx, color: const Color(0xFF333333)),
+            SizedBox(width: 8.rpx),
             Text(
               title,
-              style: const TextStyle(
-                color: Color(0xFF333333),
-                fontSize: 16,
+              style: TextStyle(
+                color: const Color(0xFF333333),
+                fontSize: 28.rpx,
                 fontWeight: FontWeight.normal,
               ),
             ),
             const Spacer(),
             Icon(
               Icons.arrow_forward_ios,
-              size: 16,
+              size: 24.rpx,
               color: Colors.grey.shade400,
             ),
           ],

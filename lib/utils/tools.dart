@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'size_fit.dart';
+
+extension NumFit on num {
+  double get rpx => SizeFit.setRpx(toDouble());
+}
+
 /// 显示确认对话框
 Future<bool?> showConfirm(
   BuildContext context, {

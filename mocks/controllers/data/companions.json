@@ -1,0 +1,2077 @@
+[
+  {
+    "id": "comp-001",
+    "userId": "user-comp-001",
+    "nickname": "小王老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher1",
+    "realName": "王晓明",
+    "school": "北京大学",
+    "major": "教育学",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "热爱教育事业，有丰富的家教经验，擅长启发式教学",
+    "videoUrl": "",
+    "tags": [
+      "作业辅导",
+      "兴趣培养",
+      "英语"
+    ],
+    "serviceTypes": [
+      "HOMEWORK",
+      "ACCOMPANY"
+    ],
+    "creditScore": 95,
+    "orderCount": 58,
+    "goodRate": "98.5",
+    "hourlyRate": "80",
+    "distance": 1.2,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-002",
+    "userId": "user-comp-002",
+    "nickname": "小李老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher2",
+    "realName": "李婷婷",
+    "school": "清华大学",
+    "major": "计算机科学",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "理科思维强，擅长数学和编程启蒙",
+    "videoUrl": "",
+    "tags": [
+      "数学",
+      "编程启蒙",
+      "逻辑思维"
+    ],
+    "serviceTypes": [
+      "HOMEWORK",
+      "TUTORING"
+    ],
+    "creditScore": 92,
+    "orderCount": 45,
+    "goodRate": "97.2",
+    "hourlyRate": "100",
+    "distance": 2.5,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-003",
+    "userId": "user-comp-003",
+    "nickname": "小张老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher3",
+    "realName": "张雪",
+    "school": "北京师范大学",
+    "major": "学前教育",
+    "grade": "研一",
+    "age": 23,
+    "introduction": "专业幼教背景，善于与孩子沟通",
+    "videoUrl": "",
+    "tags": [
+      "幼儿陪伴",
+      "绘本阅读",
+      "手工"
+    ],
+    "serviceTypes": [
+      "ACCOMPANY",
+      "INTEREST"
+    ],
+    "creditScore": 98,
+    "orderCount": 72,
+    "goodRate": "99.1",
+    "hourlyRate": "90",
+    "distance": 0.8,
+    "onlineStatus": "BUSY",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-004",
+    "userId": "user-comp-004",
+    "nickname": "小陈老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher4",
+    "realName": "陈浩",
+    "school": "中国人民大学",
+    "major": "英语",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "英语专业八级，口语流利",
+    "videoUrl": "",
+    "tags": [
+      "英语",
+      "口语练习",
+      "阅读"
+    ],
+    "serviceTypes": [
+      "TUTORING",
+      "HOMEWORK"
+    ],
+    "creditScore": 88,
+    "orderCount": 32,
+    "goodRate": "95.0",
+    "hourlyRate": "85",
+    "distance": 3.2,
+    "onlineStatus": "OFFLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-005",
+    "userId": "user-comp-005",
+    "nickname": "小刘老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher5",
+    "realName": "刘洋",
+    "school": "北京体育大学",
+    "major": "体育教育",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "擅长儿童体适能训练和户外活动",
+    "videoUrl": "",
+    "tags": [
+      "体育",
+      "户外活动",
+      "接送"
+    ],
+    "serviceTypes": [
+      "ACCOMPANY",
+      "PICKUP"
+    ],
+    "creditScore": 90,
+    "orderCount": 41,
+    "goodRate": "96.5",
+    "hourlyRate": "70",
+    "distance": 1.8,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-006",
+    "userId": "user-comp-006",
+    "nickname": "小赵老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher6",
+    "realName": "赵敏",
+    "school": "复旦大学",
+    "major": "心理学",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "心理学专业，擅长儿童心理辅导",
+    "videoUrl": "",
+    "tags": [
+      "心理辅导",
+      "情绪管理",
+      "陪伴"
+    ],
+    "serviceTypes": [
+      "ACCOMPANY",
+      "INTEREST"
+    ],
+    "creditScore": 96,
+    "orderCount": 63,
+    "goodRate": "98.8",
+    "hourlyRate": "95",
+    "distance": 2.1,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-007",
+    "userId": "user-comp-007",
+    "nickname": "小孙老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher7",
+    "realName": "孙悦",
+    "school": "上海交通大学",
+    "major": "数学",
+    "grade": "研二",
+    "age": 24,
+    "introduction": "数学竞赛金牌得主，擅长奥数辅导",
+    "videoUrl": "",
+    "tags": [
+      "奥数",
+      "数学",
+      "逻辑思维"
+    ],
+    "serviceTypes": [
+      "TUTORING",
+      "HOMEWORK"
+    ],
+    "creditScore": 97,
+    "orderCount": 89,
+    "goodRate": "99.2",
+    "hourlyRate": "120",
+    "distance": 1.5,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-008",
+    "userId": "user-comp-008",
+    "nickname": "小周老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher8",
+    "realName": "周杰",
+    "school": "浙江大学",
+    "major": "物理学",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "物理竞赛省一等奖，善于用实验讲解原理",
+    "videoUrl": "",
+    "tags": [
+      "物理",
+      "科学实验",
+      "思维训练"
+    ],
+    "serviceTypes": [
+      "TUTORING",
+      "INTEREST"
+    ],
+    "creditScore": 91,
+    "orderCount": 37,
+    "goodRate": "96.8",
+    "hourlyRate": "90",
+    "distance": 2.8,
+    "onlineStatus": "BUSY",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-009",
+    "userId": "user-comp-009",
+    "nickname": "小吴老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher9",
+    "realName": "吴芳",
+    "school": "南京大学",
+    "major": "中文",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "热爱文学，擅长作文指导和阅读理解",
+    "videoUrl": "",
+    "tags": [
+      "语文",
+      "作文",
+      "阅读"
+    ],
+    "serviceTypes": [
+      "HOMEWORK",
+      "TUTORING"
+    ],
+    "creditScore": 89,
+    "orderCount": 28,
+    "goodRate": "95.5",
+    "hourlyRate": "75",
+    "distance": 1.9,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-010",
+    "userId": "user-comp-010",
+    "nickname": "小郑老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher10",
+    "realName": "郑伟",
+    "school": "武汉大学",
+    "major": "化学",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "化学实验达人，让孩子爱上科学",
+    "videoUrl": "",
+    "tags": [
+      "化学",
+      "科学实验",
+      "动手能力"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "TUTORING"
+    ],
+    "creditScore": 93,
+    "orderCount": 51,
+    "goodRate": "97.5",
+    "hourlyRate": "88",
+    "distance": 3.5,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-011",
+    "userId": "user-comp-011",
+    "nickname": "小黄老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher11",
+    "realName": "黄丽",
+    "school": "中央音乐学院",
+    "major": "钢琴",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "钢琴十级，有5年教学经验",
+    "videoUrl": "",
+    "tags": [
+      "钢琴",
+      "音乐启蒙",
+      "乐理"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 94,
+    "orderCount": 67,
+    "goodRate": "98.2",
+    "hourlyRate": "150",
+    "distance": 2.3,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-012",
+    "userId": "user-comp-012",
+    "nickname": "小林老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher12",
+    "realName": "林涛",
+    "school": "中国美术学院",
+    "major": "美术",
+    "grade": "研一",
+    "age": 23,
+    "introduction": "美术功底扎实，擅长素描和水彩",
+    "videoUrl": "",
+    "tags": [
+      "美术",
+      "素描",
+      "绘画"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 92,
+    "orderCount": 43,
+    "goodRate": "97.0",
+    "hourlyRate": "100",
+    "distance": 1.6,
+    "onlineStatus": "BUSY",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-013",
+    "userId": "user-comp-013",
+    "nickname": "小何老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher13",
+    "realName": "何静",
+    "school": "北京外国语大学",
+    "major": "日语",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "日语N1，有留学经验",
+    "videoUrl": "",
+    "tags": [
+      "日语",
+      "小语种",
+      "文化交流"
+    ],
+    "serviceTypes": [
+      "TUTORING",
+      "INTEREST"
+    ],
+    "creditScore": 90,
+    "orderCount": 35,
+    "goodRate": "96.2",
+    "hourlyRate": "95",
+    "distance": 2.7,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-014",
+    "userId": "user-comp-014",
+    "nickname": "小马老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher14",
+    "realName": "马超",
+    "school": "同济大学",
+    "major": "建筑学",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "创意思维强，擅长乐高和建筑模型",
+    "videoUrl": "",
+    "tags": [
+      "乐高",
+      "创意思维",
+      "手工"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "ACCOMPANY"
+    ],
+    "creditScore": 88,
+    "orderCount": 29,
+    "goodRate": "95.8",
+    "hourlyRate": "85",
+    "distance": 3.1,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-015",
+    "userId": "user-comp-015",
+    "nickname": "小罗老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher15",
+    "realName": "罗琳",
+    "school": "华东师范大学",
+    "major": "特殊教育",
+    "grade": "研二",
+    "age": 24,
+    "introduction": "专注特殊儿童教育，耐心细致",
+    "videoUrl": "",
+    "tags": [
+      "特殊教育",
+      "耐心陪伴",
+      "行为矫正"
+    ],
+    "serviceTypes": [
+      "ACCOMPANY",
+      "INTEREST"
+    ],
+    "creditScore": 99,
+    "orderCount": 82,
+    "goodRate": "99.5",
+    "hourlyRate": "110",
+    "distance": 1.4,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-016",
+    "userId": "user-comp-016",
+    "nickname": "小谢老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher16",
+    "realName": "谢明",
+    "school": "中山大学",
+    "major": "生物学",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "热爱自然，擅长生物科普和自然探索",
+    "videoUrl": "",
+    "tags": [
+      "生物",
+      "自然探索",
+      "科普"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "ACCOMPANY"
+    ],
+    "creditScore": 87,
+    "orderCount": 24,
+    "goodRate": "94.8",
+    "hourlyRate": "72",
+    "distance": 2.4,
+    "onlineStatus": "OFFLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-017",
+    "userId": "user-comp-017",
+    "nickname": "小韩老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher17",
+    "realName": "韩雪",
+    "school": "北京舞蹈学院",
+    "major": "舞蹈",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "舞蹈专业，擅长少儿舞蹈启蒙",
+    "videoUrl": "",
+    "tags": [
+      "舞蹈",
+      "形体训练",
+      "艺术启蒙"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 93,
+    "orderCount": 55,
+    "goodRate": "97.8",
+    "hourlyRate": "120",
+    "distance": 1.7,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-018",
+    "userId": "user-comp-018",
+    "nickname": "小唐老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher18",
+    "realName": "唐亮",
+    "school": "电子科技大学",
+    "major": "软件工程",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "编程高手，擅长Scratch和Python启蒙",
+    "videoUrl": "",
+    "tags": [
+      "编程",
+      "Scratch",
+      "Python"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "TUTORING"
+    ],
+    "creditScore": 95,
+    "orderCount": 61,
+    "goodRate": "98.3",
+    "hourlyRate": "110",
+    "distance": 2.9,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-019",
+    "userId": "user-comp-019",
+    "nickname": "小冯老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher19",
+    "realName": "冯娜",
+    "school": "四川大学",
+    "major": "历史学",
+    "grade": "研一",
+    "age": 23,
+    "introduction": "历史知识丰富，擅长讲故事学历史",
+    "videoUrl": "",
+    "tags": [
+      "历史",
+      "国学",
+      "故事"
+    ],
+    "serviceTypes": [
+      "TUTORING",
+      "INTEREST"
+    ],
+    "creditScore": 91,
+    "orderCount": 38,
+    "goodRate": "96.5",
+    "hourlyRate": "82",
+    "distance": 2.0,
+    "onlineStatus": "BUSY",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-020",
+    "userId": "user-comp-020",
+    "nickname": "小曹老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher20",
+    "realName": "曹阳",
+    "school": "北京科技大学",
+    "major": "机械工程",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "动手能力强，擅长机器人和航模",
+    "videoUrl": "",
+    "tags": [
+      "机器人",
+      "航模",
+      "动手能力"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 89,
+    "orderCount": 31,
+    "goodRate": "95.2",
+    "hourlyRate": "88",
+    "distance": 3.3,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-021",
+    "userId": "user-comp-021",
+    "nickname": "小彭老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher21",
+    "realName": "彭洁",
+    "school": "厦门大学",
+    "major": "新闻传播",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "表达能力强，擅长演讲和主持培训",
+    "videoUrl": "",
+    "tags": [
+      "演讲",
+      "主持",
+      "口才"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "TUTORING"
+    ],
+    "creditScore": 88,
+    "orderCount": 26,
+    "goodRate": "95.0",
+    "hourlyRate": "78",
+    "distance": 1.3,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-022",
+    "userId": "user-comp-022",
+    "nickname": "小蒋老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher22",
+    "realName": "蒋磊",
+    "school": "西安交通大学",
+    "major": "电气工程",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "理工科背景，擅长物理和电子制作",
+    "videoUrl": "",
+    "tags": [
+      "物理",
+      "电子制作",
+      "科技"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "TUTORING"
+    ],
+    "creditScore": 92,
+    "orderCount": 44,
+    "goodRate": "97.2",
+    "hourlyRate": "92",
+    "distance": 2.6,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-023",
+    "userId": "user-comp-023",
+    "nickname": "小沈老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher23",
+    "realName": "沈琳",
+    "school": "南开大学",
+    "major": "金融学",
+    "grade": "研一",
+    "age": 23,
+    "introduction": "逻辑清晰，擅长数学和财商启蒙",
+    "videoUrl": "",
+    "tags": [
+      "数学",
+      "财商",
+      "逻辑"
+    ],
+    "serviceTypes": [
+      "TUTORING",
+      "HOMEWORK"
+    ],
+    "creditScore": 94,
+    "orderCount": 56,
+    "goodRate": "98.0",
+    "hourlyRate": "98",
+    "distance": 1.8,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-024",
+    "userId": "user-comp-024",
+    "nickname": "小韦老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher24",
+    "realName": "韦强",
+    "school": "哈尔滨工业大学",
+    "major": "航天工程",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "航天爱好者，擅长科普和模型制作",
+    "videoUrl": "",
+    "tags": [
+      "航天",
+      "科普",
+      "模型"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 90,
+    "orderCount": 33,
+    "goodRate": "96.0",
+    "hourlyRate": "85",
+    "distance": 3.0,
+    "onlineStatus": "OFFLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-025",
+    "userId": "user-comp-025",
+    "nickname": "小许老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher25",
+    "realName": "许婷",
+    "school": "上海外国语大学",
+    "major": "法语",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "法语专业，有法国交换经历",
+    "videoUrl": "",
+    "tags": [
+      "法语",
+      "小语种",
+      "文化"
+    ],
+    "serviceTypes": [
+      "TUTORING",
+      "INTEREST"
+    ],
+    "creditScore": 91,
+    "orderCount": 39,
+    "goodRate": "96.8",
+    "hourlyRate": "105",
+    "distance": 2.2,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-026",
+    "userId": "user-comp-026",
+    "nickname": "小邓老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher26",
+    "realName": "邓凯",
+    "school": "中国传媒大学",
+    "major": "播音主持",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "声音条件好，擅长朗诵和配音",
+    "videoUrl": "",
+    "tags": [
+      "朗诵",
+      "配音",
+      "口才"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 87,
+    "orderCount": 22,
+    "goodRate": "94.5",
+    "hourlyRate": "80",
+    "distance": 1.5,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-027",
+    "userId": "user-comp-027",
+    "nickname": "小萧老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher27",
+    "realName": "萧雨",
+    "school": "天津大学",
+    "major": "化学工程",
+    "grade": "研二",
+    "age": 24,
+    "introduction": "实验达人，擅长趣味化学实验",
+    "videoUrl": "",
+    "tags": [
+      "化学",
+      "实验",
+      "科学"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "TUTORING"
+    ],
+    "creditScore": 93,
+    "orderCount": 48,
+    "goodRate": "97.5",
+    "hourlyRate": "95",
+    "distance": 2.8,
+    "onlineStatus": "BUSY",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-028",
+    "userId": "user-comp-028",
+    "nickname": "小田老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher28",
+    "realName": "田园",
+    "school": "东北师范大学",
+    "major": "小学教育",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "有丰富的小学辅导经验",
+    "videoUrl": "",
+    "tags": [
+      "作业辅导",
+      "小学全科",
+      "习惯培养"
+    ],
+    "serviceTypes": [
+      "HOMEWORK",
+      "ACCOMPANY"
+    ],
+    "creditScore": 95,
+    "orderCount": 64,
+    "goodRate": "98.5",
+    "hourlyRate": "75",
+    "distance": 1.1,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-029",
+    "userId": "user-comp-029",
+    "nickname": "小贺老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher29",
+    "realName": "贺龙",
+    "school": "北京体育大学",
+    "major": "运动训练",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "篮球特长，擅长青少年体育训练",
+    "videoUrl": "",
+    "tags": [
+      "篮球",
+      "体育",
+      "运动"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "ACCOMPANY"
+    ],
+    "creditScore": 89,
+    "orderCount": 36,
+    "goodRate": "95.8",
+    "hourlyRate": "78",
+    "distance": 2.5,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-030",
+    "userId": "user-comp-030",
+    "nickname": "小方老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher30",
+    "realName": "方圆",
+    "school": "吉林大学",
+    "major": "地理学",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "热爱地理，擅长地理知识科普",
+    "videoUrl": "",
+    "tags": [
+      "地理",
+      "科普",
+      "自然"
+    ],
+    "serviceTypes": [
+      "TUTORING",
+      "INTEREST"
+    ],
+    "creditScore": 86,
+    "orderCount": 21,
+    "goodRate": "94.2",
+    "hourlyRate": "70",
+    "distance": 3.4,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-031",
+    "userId": "user-comp-031",
+    "nickname": "小石老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher31",
+    "realName": "石磊",
+    "school": "山东大学",
+    "major": "哲学",
+    "grade": "研一",
+    "age": 23,
+    "introduction": "思维深刻，擅长批判性思维培养",
+    "videoUrl": "",
+    "tags": [
+      "思维训练",
+      "哲学",
+      "逻辑"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "TUTORING"
+    ],
+    "creditScore": 92,
+    "orderCount": 42,
+    "goodRate": "97.0",
+    "hourlyRate": "88",
+    "distance": 1.9,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-032",
+    "userId": "user-comp-032",
+    "nickname": "小姚老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher32",
+    "realName": "姚明月",
+    "school": "中央戏剧学院",
+    "major": "表演",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "表演专业，擅长戏剧表演启蒙",
+    "videoUrl": "",
+    "tags": [
+      "戏剧",
+      "表演",
+      "艺术"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 94,
+    "orderCount": 53,
+    "goodRate": "98.2",
+    "hourlyRate": "115",
+    "distance": 2.1,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-033",
+    "userId": "user-comp-033",
+    "nickname": "小崔老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher33",
+    "realName": "崔健",
+    "school": "大连理工大学",
+    "major": "船舶工程",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "动手能力强，擅长船模和航模制作",
+    "videoUrl": "",
+    "tags": [
+      "船模",
+      "航模",
+      "手工"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 88,
+    "orderCount": 27,
+    "goodRate": "95.5",
+    "hourlyRate": "82",
+    "distance": 3.2,
+    "onlineStatus": "OFFLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-034",
+    "userId": "user-comp-034",
+    "nickname": "小潘老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher34",
+    "realName": "潘晓",
+    "school": "华南理工大学",
+    "major": "食品科学",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "热爱烘焙，擅长亲子烘焙教学",
+    "videoUrl": "",
+    "tags": [
+      "烘焙",
+      "手工",
+      "亲子活动"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "ACCOMPANY"
+    ],
+    "creditScore": 87,
+    "orderCount": 25,
+    "goodRate": "95.0",
+    "hourlyRate": "75",
+    "distance": 1.6,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-035",
+    "userId": "user-comp-035",
+    "nickname": "小葛老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher35",
+    "realName": "葛亮",
+    "school": "东南大学",
+    "major": "土木工程",
+    "grade": "研二",
+    "age": 24,
+    "introduction": "空间思维强，擅长建筑模型和积木",
+    "videoUrl": "",
+    "tags": [
+      "积木",
+      "建筑",
+      "空间思维"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 91,
+    "orderCount": 40,
+    "goodRate": "96.8",
+    "hourlyRate": "90",
+    "distance": 2.7,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-036",
+    "userId": "user-comp-036",
+    "nickname": "小董老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher36",
+    "realName": "董洁",
+    "school": "西南大学",
+    "major": "心理学",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "善于倾听，擅长儿童心理疏导",
+    "videoUrl": "",
+    "tags": [
+      "心理",
+      "陪伴",
+      "情绪管理"
+    ],
+    "serviceTypes": [
+      "ACCOMPANY",
+      "INTEREST"
+    ],
+    "creditScore": 96,
+    "orderCount": 59,
+    "goodRate": "98.5",
+    "hourlyRate": "92",
+    "distance": 1.4,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-037",
+    "userId": "user-comp-037",
+    "nickname": "小魏老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher37",
+    "realName": "魏然",
+    "school": "兰州大学",
+    "major": "环境科学",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "环保达人，擅长环保知识科普",
+    "videoUrl": "",
+    "tags": [
+      "环保",
+      "科普",
+      "自然"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "ACCOMPANY"
+    ],
+    "creditScore": 89,
+    "orderCount": 32,
+    "goodRate": "95.8",
+    "hourlyRate": "78",
+    "distance": 2.9,
+    "onlineStatus": "BUSY",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-038",
+    "userId": "user-comp-038",
+    "nickname": "小陆老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher38",
+    "realName": "陆飞",
+    "school": "上海体育学院",
+    "major": "游泳",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "游泳健将，擅长少儿游泳教学",
+    "videoUrl": "",
+    "tags": [
+      "游泳",
+      "体育",
+      "安全"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 90,
+    "orderCount": 34,
+    "goodRate": "96.2",
+    "hourlyRate": "100",
+    "distance": 2.3,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-039",
+    "userId": "user-comp-039",
+    "nickname": "小金老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher39",
+    "realName": "金晶",
+    "school": "中国药科大学",
+    "major": "药学",
+    "grade": "研一",
+    "age": 23,
+    "introduction": "医学知识丰富，擅长健康科普",
+    "videoUrl": "",
+    "tags": [
+      "健康",
+      "科普",
+      "生物"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "TUTORING"
+    ],
+    "creditScore": 92,
+    "orderCount": 45,
+    "goodRate": "97.2",
+    "hourlyRate": "88",
+    "distance": 1.7,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-040",
+    "userId": "user-comp-040",
+    "nickname": "小钟老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher40",
+    "realName": "钟鸣",
+    "school": "华中科技大学",
+    "major": "光电信息",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "科技爱好者，擅长光学实验",
+    "videoUrl": "",
+    "tags": [
+      "光学",
+      "实验",
+      "科技"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "TUTORING"
+    ],
+    "creditScore": 91,
+    "orderCount": 37,
+    "goodRate": "96.5",
+    "hourlyRate": "85",
+    "distance": 3.1,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-041",
+    "userId": "user-comp-041",
+    "nickname": "小严老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher41",
+    "realName": "严华",
+    "school": "苏州大学",
+    "major": "纺织工程",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "手工达人，擅长布艺和缝纫",
+    "videoUrl": "",
+    "tags": [
+      "手工",
+      "布艺",
+      "创意"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 88,
+    "orderCount": 28,
+    "goodRate": "95.2",
+    "hourlyRate": "72",
+    "distance": 2.0,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-042",
+    "userId": "user-comp-042",
+    "nickname": "小尤老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher42",
+    "realName": "尤佳",
+    "school": "中国农业大学",
+    "major": "园艺学",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "热爱植物，擅长自然教育",
+    "videoUrl": "",
+    "tags": [
+      "植物",
+      "自然教育",
+      "动手"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "ACCOMPANY"
+    ],
+    "creditScore": 86,
+    "orderCount": 23,
+    "goodRate": "94.5",
+    "hourlyRate": "68",
+    "distance": 2.6,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-043",
+    "userId": "user-comp-043",
+    "nickname": "小白老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher43",
+    "realName": "白雪",
+    "school": "西北大学",
+    "major": "考古学",
+    "grade": "研二",
+    "age": 24,
+    "introduction": "历史爱好者，擅长文物知识科普",
+    "videoUrl": "",
+    "tags": [
+      "历史",
+      "考古",
+      "科普"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "TUTORING"
+    ],
+    "creditScore": 93,
+    "orderCount": 49,
+    "goodRate": "97.5",
+    "hourlyRate": "90",
+    "distance": 1.8,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-044",
+    "userId": "user-comp-044",
+    "nickname": "小顾老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher44",
+    "realName": "顾明",
+    "school": "南京理工大学",
+    "major": "自动化",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "机器人爱好者，擅长机器人编程",
+    "videoUrl": "",
+    "tags": [
+      "机器人",
+      "编程",
+      "AI"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 94,
+    "orderCount": 54,
+    "goodRate": "98.0",
+    "hourlyRate": "108",
+    "distance": 2.4,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-045",
+    "userId": "user-comp-045",
+    "nickname": "小孟老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher45",
+    "realName": "孟涛",
+    "school": "北京航空航天大学",
+    "major": "飞行器设计",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "航空迷，擅长航模和无人机",
+    "videoUrl": "",
+    "tags": [
+      "航模",
+      "无人机",
+      "科技"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 92,
+    "orderCount": 46,
+    "goodRate": "97.2",
+    "hourlyRate": "95",
+    "distance": 3.0,
+    "onlineStatus": "BUSY",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-046",
+    "userId": "user-comp-046",
+    "nickname": "小龙老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher46",
+    "realName": "龙飞",
+    "school": "武汉体育学院",
+    "major": "武术",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "武术冠军，擅长少儿武术启蒙",
+    "videoUrl": "",
+    "tags": [
+      "武术",
+      "体育",
+      "防身"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 91,
+    "orderCount": 38,
+    "goodRate": "96.8",
+    "hourlyRate": "88",
+    "distance": 1.5,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-047",
+    "userId": "user-comp-047",
+    "nickname": "小万老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher47",
+    "realName": "万欣",
+    "school": "上海音乐学院",
+    "major": "小提琴",
+    "grade": "研一",
+    "age": 23,
+    "introduction": "小提琴专业，有丰富演出经验",
+    "videoUrl": "",
+    "tags": [
+      "小提琴",
+      "音乐",
+      "乐器"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 95,
+    "orderCount": 62,
+    "goodRate": "98.5",
+    "hourlyRate": "160",
+    "distance": 2.2,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-048",
+    "userId": "user-comp-048",
+    "nickname": "小段老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher48",
+    "realName": "段鹏",
+    "school": "重庆大学",
+    "major": "车辆工程",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "汽车爱好者，擅长汽车模型制作",
+    "videoUrl": "",
+    "tags": [
+      "汽车",
+      "模型",
+      "手工"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 87,
+    "orderCount": 26,
+    "goodRate": "95.0",
+    "hourlyRate": "78",
+    "distance": 2.8,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-049",
+    "userId": "user-comp-049",
+    "nickname": "小雷老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher49",
+    "realName": "雷阳",
+    "school": "湖南大学",
+    "major": "工业设计",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "设计思维强，擅长创意美术",
+    "videoUrl": "",
+    "tags": [
+      "设计",
+      "创意",
+      "美术"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 93,
+    "orderCount": 50,
+    "goodRate": "97.5",
+    "hourlyRate": "95",
+    "distance": 1.9,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-050",
+    "userId": "user-comp-050",
+    "nickname": "小侯老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher50",
+    "realName": "侯佳",
+    "school": "暨南大学",
+    "major": "国际关系",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "多语言背景，擅长国际视野培养",
+    "videoUrl": "",
+    "tags": [
+      "国际",
+      "文化",
+      "视野"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "TUTORING"
+    ],
+    "creditScore": 88,
+    "orderCount": 29,
+    "goodRate": "95.5",
+    "hourlyRate": "82",
+    "distance": 3.3,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-051",
+    "userId": "user-comp-051",
+    "nickname": "小龚老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher51",
+    "realName": "龚云",
+    "school": "云南大学",
+    "major": "民族学",
+    "grade": "研一",
+    "age": 23,
+    "introduction": "文化视野广，擅长民族文化科普",
+    "videoUrl": "",
+    "tags": [
+      "文化",
+      "民族",
+      "科普"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "ACCOMPANY"
+    ],
+    "creditScore": 90,
+    "orderCount": 35,
+    "goodRate": "96.2",
+    "hourlyRate": "80",
+    "distance": 2.1,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-052",
+    "userId": "user-comp-052",
+    "nickname": "小文老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher52",
+    "realName": "文静",
+    "school": "首都师范大学",
+    "major": "书法",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "书法功底扎实，擅长硬笔和软笔",
+    "videoUrl": "",
+    "tags": [
+      "书法",
+      "硬笔",
+      "软笔"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 94,
+    "orderCount": 57,
+    "goodRate": "98.0",
+    "hourlyRate": "90",
+    "distance": 1.3,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-053",
+    "userId": "user-comp-053",
+    "nickname": "小廖老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher53",
+    "realName": "廖敏",
+    "school": "广西大学",
+    "major": "农学",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "热爱自然，擅长农业体验教育",
+    "videoUrl": "",
+    "tags": [
+      "农业",
+      "自然",
+      "体验"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "ACCOMPANY"
+    ],
+    "creditScore": 86,
+    "orderCount": 24,
+    "goodRate": "94.8",
+    "hourlyRate": "68",
+    "distance": 2.5,
+    "onlineStatus": "OFFLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-054",
+    "userId": "user-comp-054",
+    "nickname": "小熊老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher54",
+    "realName": "熊伟",
+    "school": "北京理工大学",
+    "major": "信息安全",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "编程能力强，擅长信息学竞赛",
+    "videoUrl": "",
+    "tags": [
+      "编程",
+      "信息学",
+      "竞赛"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "TUTORING"
+    ],
+    "creditScore": 95,
+    "orderCount": 60,
+    "goodRate": "98.2",
+    "hourlyRate": "115",
+    "distance": 1.6,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-055",
+    "userId": "user-comp-055",
+    "nickname": "小范老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher55",
+    "realName": "范婷",
+    "school": "华南师范大学",
+    "major": "教育技术",
+    "grade": "研二",
+    "age": 24,
+    "introduction": "教学方法新颖，擅长趣味教学",
+    "videoUrl": "",
+    "tags": [
+      "趣味教学",
+      "教育",
+      "创新"
+    ],
+    "serviceTypes": [
+      "HOMEWORK",
+      "TUTORING"
+    ],
+    "creditScore": 96,
+    "orderCount": 68,
+    "goodRate": "98.8",
+    "hourlyRate": "98",
+    "distance": 1.2,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-056",
+    "userId": "user-comp-056",
+    "nickname": "小彭老师2",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher56",
+    "realName": "彭磊",
+    "school": "中南大学",
+    "major": "材料科学",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "实验达人，擅长材料实验科普",
+    "videoUrl": "",
+    "tags": [
+      "材料",
+      "实验",
+      "科学"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 89,
+    "orderCount": 33,
+    "goodRate": "95.8",
+    "hourlyRate": "82",
+    "distance": 2.7,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-057",
+    "userId": "user-comp-057",
+    "nickname": "小卢老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher57",
+    "realName": "卢婷",
+    "school": "福州大学",
+    "major": "数学",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "数学思维强，擅长思维导图教学",
+    "videoUrl": "",
+    "tags": [
+      "数学",
+      "思维导图",
+      "逻辑"
+    ],
+    "serviceTypes": [
+      "HOMEWORK",
+      "TUTORING"
+    ],
+    "creditScore": 92,
+    "orderCount": 47,
+    "goodRate": "97.2",
+    "hourlyRate": "88",
+    "distance": 2.0,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-058",
+    "userId": "user-comp-058",
+    "nickname": "小蔡老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher58",
+    "realName": "蔡明",
+    "school": "郑州大学",
+    "major": "法学",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "逻辑清晰，擅长辩论和逻辑训练",
+    "videoUrl": "",
+    "tags": [
+      "辩论",
+      "逻辑",
+      "表达"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 87,
+    "orderCount": 25,
+    "goodRate": "95.0",
+    "hourlyRate": "75",
+    "distance": 3.2,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-059",
+    "userId": "user-comp-059",
+    "nickname": "小贾老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher59",
+    "realName": "贾敏",
+    "school": "河海大学",
+    "major": "水利工程",
+    "grade": "研一",
+    "age": 23,
+    "introduction": "动手能力强，擅长水利模型制作",
+    "videoUrl": "",
+    "tags": [
+      "模型",
+      "水利",
+      "科学"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 90,
+    "orderCount": 36,
+    "goodRate": "96.5",
+    "hourlyRate": "85",
+    "distance": 1.8,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-060",
+    "userId": "user-comp-060",
+    "nickname": "小丁老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher60",
+    "realName": "丁浩",
+    "school": "西南交通大学",
+    "major": "交通运输",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "交通爱好者，擅长交通知识科普",
+    "videoUrl": "",
+    "tags": [
+      "交通",
+      "科普",
+      "模型"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 88,
+    "orderCount": 30,
+    "goodRate": "95.5",
+    "hourlyRate": "78",
+    "distance": 2.4,
+    "onlineStatus": "BUSY",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-061",
+    "userId": "user-comp-061",
+    "nickname": "小余老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher61",
+    "realName": "余涛",
+    "school": "合肥工业大学",
+    "major": "计算机",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "程序员，擅长少儿编程教学",
+    "videoUrl": "",
+    "tags": [
+      "编程",
+      "Python",
+      "算法"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "TUTORING"
+    ],
+    "creditScore": 93,
+    "orderCount": 52,
+    "goodRate": "97.8",
+    "hourlyRate": "105",
+    "distance": 1.4,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-062",
+    "userId": "user-comp-062",
+    "nickname": "小戴老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher62",
+    "realName": "戴丽",
+    "school": "安徽大学",
+    "major": "英语翻译",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "英语口语流利，有国外游学经历",
+    "videoUrl": "",
+    "tags": [
+      "英语",
+      "口语",
+      "翻译"
+    ],
+    "serviceTypes": [
+      "TUTORING",
+      "HOMEWORK"
+    ],
+    "creditScore": 89,
+    "orderCount": 31,
+    "goodRate": "95.8",
+    "hourlyRate": "88",
+    "distance": 2.6,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-063",
+    "userId": "user-comp-063",
+    "nickname": "小夏老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher63",
+    "realName": "夏阳",
+    "school": "南昌大学",
+    "major": "医学",
+    "grade": "研二",
+    "age": 24,
+    "introduction": "医学专业，擅长急救和健康知识",
+    "videoUrl": "",
+    "tags": [
+      "急救",
+      "健康",
+      "医学"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 94,
+    "orderCount": 55,
+    "goodRate": "98.0",
+    "hourlyRate": "92",
+    "distance": 1.7,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-064",
+    "userId": "user-comp-064",
+    "nickname": "小钱老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher64",
+    "realName": "钱伟",
+    "school": "太原理工大学",
+    "major": "采矿工程",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "地质爱好者，擅长矿石和地质科普",
+    "videoUrl": "",
+    "tags": [
+      "地质",
+      "矿石",
+      "科普"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 86,
+    "orderCount": 22,
+    "goodRate": "94.5",
+    "hourlyRate": "70",
+    "distance": 3.0,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-065",
+    "userId": "user-comp-065",
+    "nickname": "小汤老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher65",
+    "realName": "汤圆",
+    "school": "江南大学",
+    "major": "食品科学",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "美食达人，擅长营养和烹饪科普",
+    "videoUrl": "",
+    "tags": [
+      "营养",
+      "烹饪",
+      "美食"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "ACCOMPANY"
+    ],
+    "creditScore": 91,
+    "orderCount": 41,
+    "goodRate": "96.8",
+    "hourlyRate": "82",
+    "distance": 2.1,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-066",
+    "userId": "user-comp-066",
+    "nickname": "小许老师2",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher66",
+    "realName": "许涛",
+    "school": "内蒙古大学",
+    "major": "生态学",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "自然爱好者，擅长生态和动物科普",
+    "videoUrl": "",
+    "tags": [
+      "生态",
+      "动物",
+      "自然"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "ACCOMPANY"
+    ],
+    "creditScore": 87,
+    "orderCount": 26,
+    "goodRate": "95.2",
+    "hourlyRate": "72",
+    "distance": 2.9,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-067",
+    "userId": "user-comp-067",
+    "nickname": "小吕老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher67",
+    "realName": "吕晶",
+    "school": "西北工业大学",
+    "major": "航空发动机",
+    "grade": "研一",
+    "age": 23,
+    "introduction": "航空迷，擅长航空航天知识科普",
+    "videoUrl": "",
+    "tags": [
+      "航空",
+      "发动机",
+      "科技"
+    ],
+    "serviceTypes": [
+      "INTEREST"
+    ],
+    "creditScore": 93,
+    "orderCount": 48,
+    "goodRate": "97.5",
+    "hourlyRate": "95",
+    "distance": 1.5,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-068",
+    "userId": "user-comp-068",
+    "nickname": "小施老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher68",
+    "realName": "施敏",
+    "school": "南京师范大学",
+    "major": "学前教育",
+    "grade": "大三",
+    "age": 21,
+    "introduction": "幼教专业，擅长幼儿启蒙教育",
+    "videoUrl": "",
+    "tags": [
+      "幼儿",
+      "启蒙",
+      "陪伴"
+    ],
+    "serviceTypes": [
+      "ACCOMPANY",
+      "INTEREST"
+    ],
+    "creditScore": 97,
+    "orderCount": 73,
+    "goodRate": "99.0",
+    "hourlyRate": "85",
+    "distance": 1.1,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-069",
+    "userId": "user-comp-069",
+    "nickname": "小张老师2",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher69",
+    "realName": "张伟",
+    "school": "华北电力大学",
+    "major": "电气工程",
+    "grade": "大四",
+    "age": 22,
+    "introduction": "电力爱好者，擅长电学实验",
+    "videoUrl": "",
+    "tags": [
+      "电学",
+      "实验",
+      "科技"
+    ],
+    "serviceTypes": [
+      "INTEREST",
+      "TUTORING"
+    ],
+    "creditScore": 90,
+    "orderCount": 39,
+    "goodRate": "96.2",
+    "hourlyRate": "88",
+    "distance": 2.3,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  },
+  {
+    "id": "comp-070",
+    "userId": "user-comp-070",
+    "nickname": "小康老师",
+    "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=teacher70",
+    "realName": "康乐",
+    "school": "海南大学",
+    "major": "旅游管理",
+    "grade": "大二",
+    "age": 20,
+    "introduction": "热爱旅行，擅长户外探索和自然教育",
+    "videoUrl": "",
+    "tags": [
+      "户外",
+      "探索",
+      "自然"
+    ],
+    "serviceTypes": [
+      "ACCOMPANY",
+      "INTEREST"
+    ],
+    "creditScore": 88,
+    "orderCount": 28,
+    "goodRate": "95.5",
+    "hourlyRate": "75",
+    "distance": 3.1,
+    "onlineStatus": "ONLINE",
+    "educationVerify": "VERIFIED",
+    "identityVerifyStatus": "VERIFIED"
+  }
+]

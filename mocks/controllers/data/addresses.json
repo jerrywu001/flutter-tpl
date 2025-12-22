@@ -1,0 +1,41 @@
+[
+  {
+    "id": "addr-001",
+    "contactName": "张三",
+    "contactPhone": "13800138001",
+    "province": "北京市",
+    "city": "北京市",
+    "district": "朝阳区",
+    "detail": "建国路88号SOHO现代城A座1501",
+    "fullAddress": "北京市北京市朝阳区建国路88号SOHO现代城A座1501",
+    "longitude": 116.4551,
+    "latitude": 39.9204,
+    "isDefault": true
+  },
+  {
+    "id": "addr-002",
+    "contactName": "李四",
+    "contactPhone": "13800138002",
+    "province": "北京市",
+    "city": "北京市",
+    "district": "海淀区",
+    "detail": "中关村大街1号海龙大厦8层",
+    "fullAddress": "北京市北京市海淀区中关村大街1号海龙大厦8层",
+    "longitude": 116.3108,
+    "latitude": 39.9836,
+    "isDefault": false
+  },
+  {
+    "id": "addr-003",
+    "contactName": "王五",
+    "contactPhone": "13800138003",
+    "province": "北京市",
+    "city": "北京市",
+    "district": "西城区",
+    "detail": "金融街7号英蓝国际金融中心",
+    "fullAddress": "北京市北京市西城区金融街7号英蓝国际金融中心",
+    "longitude": 116.3596,
+    "latitude": 39.9128,
+    "isDefault": false
+  }
+]

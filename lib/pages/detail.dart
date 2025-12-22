@@ -2,8 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import '../utils/tools.dart';
+import 'package:ybx_parent_client/utils/tools.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key});
@@ -50,10 +49,19 @@ class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     // 根据滚动位置动态计算状态栏样式
-    final brightness = _appBarOpacity > 0.5 ? Brightness.dark : Brightness.light;
+    final brightness = _appBarOpacity > 0.5
+        ? Brightness.dark
+        : Brightness.light;
+    final overlayStyle = SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: brightness,
+      statusBarBrightness: brightness == Brightness.dark
+          ? Brightness.light
+          : Brightness.dark,
+    );
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: const SystemUiOverlayStyle(),
+      value: overlayStyle,
       child: Scaffold(
         extendBodyBehindAppBar: true,
         appBar: PreferredSize(
@@ -76,10 +84,7 @@ class _DetailPageState extends State<DetailPage> {
             child: AppBar(
               backgroundColor: Colors.transparent,
               elevation: 0,
-              systemOverlayStyle: SystemUiOverlayStyle(
-                statusBarColor: Colors.transparent,
-                statusBarIconBrightness: brightness,
-              ),
+              systemOverlayStyle: overlayStyle,
               title: AnimatedDefaultTextStyle(
                 duration: const Duration(milliseconds: 200),
                 style: TextStyle(
@@ -148,75 +153,77 @@ class _DetailPageState extends State<DetailPage> {
             ),
 
             SliverList(
-              delegate: SliverChildBuilderDelegate(
-                (context, index) {
-                  final isLastItem = index == 19;
-                  return SafeArea(
-                    top: false,
-                    bottom: isLastItem,
-                    child: Container(
-                      color: Colors.white,
-                      child: Column(
-                        children: [
-                          Card(
-                            margin: const EdgeInsets.symmetric(
-                              horizontal: 16,
-                              vertical: 8,
-                            ),
-                            elevation: 2,
-                            child: ListTile(
-                              leading: CircleAvatar(
-                                backgroundColor: Colors.blue.shade100,
-                                child: Text(
-                                  '${index + 1}',
-                                  style: TextStyle(
-                                    color: Colors.blue.shade700,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                              title: Text(
-                                '列表项目 ${index + 1}',
-                                style: const TextStyle(fontWeight: FontWeight.w600),
-                              ),
-                              subtitle: Text(
-                                '向上滚动页面，AppBar 会从透明变为白色背景',
-                                style: TextStyle(
-                                  fontSize: 13,
-                                  color: Colors.grey.shade600,
-                                ),
-                              ),
-                              trailing: Icon(
-                                Icons.arrow_forward_ios,
-                                size: 16,
-                                color: Colors.grey.shade400,
-                              ),
-                              onTap: () {
-                                showToast(context, '点击了项目 ${index + 1}');
-                              },
-                            ),
+              delegate: SliverChildBuilderDelegate((context, index) {
+                final isLastItem = index == 19;
+                return SafeArea(
+                  top: false,
+                  bottom: isLastItem,
+                  child: Container(
+                    color: Colors.white,
+                    child: Column(
+                      children: [
+                        Card(
+                          margin: const EdgeInsets.symmetric(
+                            horizontal: 16,
+                            vertical: 8,
                           ),
-                        ],
-                      ),
+                          elevation: 2,
+                          child: ListTile(
+                            leading: CircleAvatar(
+                              backgroundColor: Colors.blue.shade100,
+                              child: Text(
+                                '${index + 1}',
+                                style: TextStyle(
+                                  color: Colors.blue.shade700,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                            title: Text(
+                              '列表项目 ${index + 1}',
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            subtitle: Text(
+                              '向上滚动页面，AppBar 会从透明变为白色背景',
+                              style: TextStyle(
+                                fontSize: 13,
+                                color: Colors.grey.shade600,
+                              ),
+                            ),
+                            trailing: Icon(
+                              Icons.arrow_forward_ios,
+                              size: 16,
+                              color: Colors.grey.shade400,
+                            ),
+                            onTap: () {
+                              showToast(context, '点击了项目 ${index + 1}');
+                            },
+                          ),
+                        ),
+                      ],
                     ),
-                  );
-              },
-              childCount: 20
+                  ),
+                );
+              }, childCount: 20),
             ),
-          )],
+          ],
         ),
-        floatingActionButton: _scrollOffset > 200 ? FloatingActionButton(
-          onPressed: () {
-            // 滚动到顶部
-            _scrollController.animateTo(
-              0,
-              duration: const Duration(milliseconds: 500),
-              curve: Curves.easeInOut,
-            );
-          },
-          tooltip: '回到顶部',
-          child: const Icon(Icons.arrow_upward),
-        ) : null,
+        floatingActionButton: _scrollOffset > 200
+            ? FloatingActionButton(
+                onPressed: () {
+                  // 滚动到顶部
+                  _scrollController.animateTo(
+                    0,
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.easeInOut,
+                  );
+                },
+                tooltip: '回到顶部',
+                child: const Icon(Icons.arrow_upward),
+              )
+            : null,
       ),
     );
   }

@@ -10,7 +10,10 @@
 .history
 .svn/
 .swiftpm/
+.env.mock.local
 .claude/tmp
+node_modules/
+mocks/node_modules
 migrate_working_dir/
 
 # IntelliJ related

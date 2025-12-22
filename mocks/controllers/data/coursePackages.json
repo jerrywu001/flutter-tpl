@@ -1,0 +1,54 @@
+[
+  {
+    "id": "pkg-001",
+    "name": "体验包",
+    "hours": 5,
+    "originalPrice": 500,
+    "salePrice": 450,
+    "discount": 0.9,
+    "applicableScene": "新用户首次体验",
+    "description": "适合首次体验的家庭，5课时灵活使用",
+    "sortOrder": 1,
+    "status": "ACTIVE",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "pkg-002",
+    "name": "基础包",
+    "hours": 10,
+    "originalPrice": 1000,
+    "salePrice": 880,
+    "discount": 0.88,
+    "applicableScene": "日常使用",
+    "description": "10课时套餐，满足日常陪伴需求",
+    "sortOrder": 2,
+    "status": "ACTIVE",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "pkg-003",
+    "name": "超值包",
+    "hours": 20,
+    "originalPrice": 2000,
+    "salePrice": 1680,
+    "discount": 0.84,
+    "applicableScene": "高频使用",
+    "description": "20课时套餐，性价比之选",
+    "sortOrder": 3,
+    "status": "ACTIVE",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "pkg-004",
+    "name": "尊享包",
+    "hours": 50,
+    "originalPrice": 5000,
+    "salePrice": 3990,
+    "discount": 0.798,
+    "applicableScene": "长期使用",
+    "description": "50课时大礼包，尊享最优惠价格",
+    "sortOrder": 4,
+    "status": "ACTIVE",
+    "createdAt": "2024-01-01T00:00:00.000Z"
+  }
+]
