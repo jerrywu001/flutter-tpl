@@ -27,17 +27,20 @@ class _MineScreenState extends State<MineScreen> {
 
   @override
   Widget build(BuildContext context) {
+    const overlayStyle = SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.dark,
+      statusBarBrightness: Brightness.light,
+    );
+
     return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: const SystemUiOverlayStyle(),
+      value: overlayStyle,
       child: Scaffold(
         extendBodyBehindAppBar: true,
         appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          systemOverlayStyle: const SystemUiOverlayStyle(
-            statusBarColor: Colors.transparent,
-            statusBarIconBrightness: Brightness.dark,
-          ),
+          systemOverlayStyle: overlayStyle,
         ),
         body: Stack(
           children: [
@@ -56,7 +59,7 @@ class _MineScreenState extends State<MineScreen> {
                 children: [
                   const SizedBox(height: 72),
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 16.rpx),
+                    padding: EdgeInsets.symmetric(horizontal: 32.rpx),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
