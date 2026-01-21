@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:ybx_parent_client/config/env.dart';
 import 'package:ybx_parent_client/utils/index.dart';
 
 import 'http_types.dart';
@@ -24,17 +25,13 @@ class HttpRequest {
 
   /// 初始化
   static void init() {
-    const printError = true;
-    const timeout = Duration(seconds: 30);
-    const hostUrl = String.fromEnvironment('API_HOST');
-
-    SystemLog.success('\n API HOST URL 🎉⬇️');
-    SystemLog.info(hostUrl);
+    SystemLog.success('\n API HOST URL ${Env.envName} 🎉⬇️');
+    SystemLog.info(Env.hostUrl);
 
     _instance._config = HttpConfig(
-      baseUrl: hostUrl,
-      timeout: timeout,
-      printError: printError,
+      baseUrl: Env.hostUrl,
+      timeout: Env.timeout,
+      printError: Env.printError,
     );
 
     _instance._dio = Dio(
@@ -135,9 +132,13 @@ class HttpRequest {
     headers ??= {};
     headers['Authorization'] = 'Bearer $token';
 
-    SystemLog.success('\n $method:  $path');
-    SystemLog.success('🚀 queryParameters:  $queryParameters');
+    SystemLog.info('-----------------------------------------');
+    SystemLog.success('$method:  $path');
+    SystemLog.info('-----------------------------------------');
+    SystemLog.success('🚀 body:  $queryParameters');
+    SystemLog.info('-----------------------------------------');
     SystemLog.success('🍥 headers:  $headers');
+    SystemLog.info('-----------------------------------------');
 
     try {
       final response = await _instance._dio.request(
@@ -163,7 +164,8 @@ class HttpRequest {
     Response response,
     T Function(dynamic)? fromJsonT,
   ) {
-    SystemLog.info('Response: $response \n');
+    SystemLog.json(response.data, label: 'Response', pretty: false);
+    SystemLog.info('-----------------------------------------');
 
     final data = response.data ?? response.context;
 

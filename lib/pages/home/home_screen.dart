@@ -1,6 +1,9 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:ybx_parent_client/api/home/index.dart';
 import 'package:ybx_parent_client/config/routes.dart';
+import 'package:ybx_parent_client/stores/index.dart';
 import 'package:ybx_parent_client/types/home/index.dart';
 import 'package:ybx_parent_client/utils/index.dart';
 import 'package:ybx_parent_client/widgets/bottom_nav.dart';
@@ -12,14 +15,11 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+class _HomeScreenState extends State<HomeScreen> with SignalsMixin {
+  /// 计算属性：基于 counter 的派生值（在 Widget 内部定义）
+  late final computedFullName = createComputed(
+    () => 'counter updated by createComputed: ${counterStore.counter.value}',
+  );
 
   Future<void> fetchNearbyCompanions() async {
     try {
@@ -60,16 +60,21 @@ class _HomeScreenState extends State<HomeScreen> {
               child: const Text('Go to Data List'),
             ),
             const SizedBox(height: 10),
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            const Text('下面展示了store在视图中的几种使用方式：'),
+            Text(computedFullName.value),
+            // 来自 Store 的 computed
+            Watch((context) => Text(counterStore.fullName.value)),
+            // 使用 Watch 监听 原始 signal 变化
+            Watch(
+              (context) => Text(
+                'counter updated by Watch: ${counterStore.counter.value}',
+              ),
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: counterStore.increment,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),

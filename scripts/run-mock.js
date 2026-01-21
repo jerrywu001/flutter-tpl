@@ -20,7 +20,7 @@ function getLocalIP() {
 const localIP = getLocalIP();
 const envContent = `# ====== mock，填写你本机的ip 地址 + 6009 ====
 API_HOST = http://${localIP}:6009
-ENV_DEV = mock
+ENV_NAME = mock
 `;
 
 const envPath = join(__dirname, '..', '.env.mock.local');

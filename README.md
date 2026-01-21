@@ -39,7 +39,7 @@ npm run dev:mock
 ```md
 # ====== mock，填写你本机的ip 地址 + 6009 ====
 API_HOST = http://192.168.10.254:6009
-ENV_DEV = mock
+ENV_NAME = mock
 ```
 
 - run dev
