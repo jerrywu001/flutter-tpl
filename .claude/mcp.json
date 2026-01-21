@@ -4,10 +4,12 @@
       "url": "http://127.0.0.1:3845/mcp",
       "type": "sse"
     },
-    "duckduckgo": {
+    "chrome-devtools": {
       "command": "npx",
-      "args": ["-y", "@oevortex/ddg_search@latest"],
-      "type": "stdio"
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ]
     }
   }
 }

@@ -53,6 +53,13 @@ https://developers.figma.com/docs/figma-mcp-server/local-server-installation/#cl
 
 https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/#cursor
 
+
+## chrome-devtools-mcp
+
+```bash
+claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
+```
+
 ## 功能特性
 
 通过 Figma MCP 服务，可以：
