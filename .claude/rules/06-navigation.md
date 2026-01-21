@@ -15,7 +15,7 @@ Navigator.pushNamed(context, AppRoutes.detail);
 
 ## AppRoutes 定义
 
-`AppRoutes` 类是所有路由定义的单一信息源：
+`AppRoutes` 类（位于 `lib/routes/routes.dart`）是所有路由定义的单一信息源：
 
 ```dart
 class AppRoutes {

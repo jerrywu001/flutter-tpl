@@ -272,11 +272,11 @@ try {
     // 处理成功响应
   } else {
     // 处理业务错误
-    showToast(response.message);
+    TDToast.showText(response.message, context: context);
   }
 } catch (e) {
   // 处理异常
-  showToast('请求失败，请稍后重试');
+  TDToast.showFail('请求失败，请稍后重试', context: context);
 }
 ```
 

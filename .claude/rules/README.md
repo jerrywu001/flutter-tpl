@@ -17,6 +17,7 @@
 - `10-state-management.md` - 状态管理
 - `11-logging.md` - 日志工具
 - `12-types.md` - 类型定义规范
+- `13-tdesign.md` - TDesign UI 组件库使用指南
 
 ## 快速开始
 

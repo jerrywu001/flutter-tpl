@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:ybx_parent_client/config/env.dart';
+import 'package:ybx_parent_client/config/index.dart';
 import 'package:ybx_parent_client/utils/index.dart';
 
 import 'http_types.dart';

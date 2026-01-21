@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ybx_parent_client/api/request/index.dart';
+import 'package:ybx_parent_client/routes/routes.dart';
 import 'package:ybx_parent_client/utils/index.dart';
 
-import 'config/routes.dart';
 import 'pages/home/index.dart';
 
 void main() {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ybx_parent_client/config/routes.dart';
+import 'package:tdesign_flutter/tdesign_flutter.dart';
+import 'package:ybx_parent_client/routes/routes.dart';
 import 'package:ybx_parent_client/utils/tools.dart';
 import 'package:ybx_parent_client/widgets/bottom_nav.dart';
 import 'package:ybx_parent_client/widgets/svg_icon.dart';
@@ -13,16 +14,29 @@ class MineScreen extends StatefulWidget {
 }
 
 class _MineScreenState extends State<MineScreen> {
-  void _logout() async {
-    final result = await showConfirm(
-      context,
-      title: '提示',
-      content: '是否确认退出登录？',
+  void _logout() {
+    showGeneralDialog(
+      context: context,
+      pageBuilder:
+          (
+            BuildContext buildContext,
+            Animation<double> animation,
+            Animation<double> secondaryAnimation,
+          ) {
+            return TDAlertDialog(
+              title: '提示',
+              content: '是否确认退出登录？',
+              leftBtnAction: () {
+                Navigator.pop(context);
+                TDToast.showText('cancel', context: context);
+              },
+              rightBtnAction: () {
+                Navigator.pop(context);
+                TDToast.showText('will logout', context: context);
+              },
+            );
+          },
     );
-
-    if (!mounted || result != true) return;
-
-    showToast(context, 'will logout');
   }
 
   @override

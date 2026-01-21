@@ -2,7 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ybx_parent_client/utils/tools.dart';
+import 'package:tdesign_flutter/tdesign_flutter.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({super.key});
@@ -198,7 +198,10 @@ class _DetailPageState extends State<DetailPage> {
                               color: Colors.grey.shade400,
                             ),
                             onTap: () {
-                              showToast(context, '点击了项目 ${index + 1}');
+                              TDToast.showText(
+                                '点击了项目 ${index + 1}',
+                                context: context,
+                              );
                             },
                           ),
                         ),

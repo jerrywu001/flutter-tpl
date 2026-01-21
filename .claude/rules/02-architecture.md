@@ -9,11 +9,17 @@
 ## 项目结构
 
 - `lib/main.dart` - 应用入口；包含 `MyApp`、`MyHomePage` 和 `MyHomePageState`（管理标签页切换）
-- `lib/config/routes.dart` - 集中式路由定义（`AppRoutes` 类）
+- `lib/config/` - 配置文件（环境变量、常量配置）
+- `lib/routes/routes.dart` - 集中式路由定义（`AppRoutes` 类）
 - `lib/pages/home/` - 底部导航标签屏幕（HomeScreen、MessageScreen、MineScreen）
 - `lib/pages/` - 通过命名路由访问的嵌套页面（DetailPage、EditPasswordPage）
-- `lib/widgets/` - 可复用组件（`BottomNav`、`SvgIcon`）
-- `lib/utils/tools.dart` - 共享工具函数（`showConfirm`、`showToast`、`formatDate`、`isValidEmail`、`debounce`）
+- `lib/widgets/` - 可复用组件（`BottomNav`、`SvgIcon`、`ImageUploader`）
+- `lib/api/` - API 接口定义和 HTTP 请求封装
+  - `lib/api/request/` - HTTP 请求核心封装
+  - `lib/api/common/` - 公共 API（图片上传等）
+- `lib/stores/` - 状态管理（使用 signals）
+- `lib/types/` - 类型定义（请求参数、响应数据、枚举等）
+- `lib/utils/tools.dart` - 共享工具函数（`formatDate`、`isValidEmail`、`debounce`、`formatMoneyString`、`desensitizePhone` 等）
 - `lib/utils/size_fit.dart` - 响应式设计系统工具
 - `assets/` - 静态资源（在 `pubspec.yaml` 中引用）
 

@@ -1,10 +1,33 @@
 # ybx_parent_client
 
-优伴学家长端app
+优伴学家长端app，项目集成了
 
-## cc mcp安装
+- tdesign flutter
+- dio request 封装
+- signals store 管理
+- syslog 日志
+- tools 工具函数
+- widget 小部件
+- 多环境运行 (dev, prod, mock)
+- 路由管理
+- claudecode集成
+
+# cc mcp安装
 
 [mcp](mcp.md)
+
+
+# 关于tddesigner
+
+ios需要安装cocoapods
+
+- `brew install cocoapods`
+
+# 一些常用工具函数，放在
+
+lib/utils/tools.dart
+
+[tools](lib/utils/tools.dart)
 
 ## 如何运行多环境
 

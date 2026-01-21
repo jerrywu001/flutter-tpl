@@ -84,7 +84,7 @@ flutter build ios --dart-define-from-file .env.production --release
 ## 在代码中使用
 
 ```dart
-import 'package:ybx_parent_client/config/env.dart';
+import 'package:ybx_parent_client/config/index.dart';
 
 // 获取 API Host
 final apiHost = Env.hostUrl;
