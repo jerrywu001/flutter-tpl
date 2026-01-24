@@ -12,28 +12,18 @@
 - 路由管理
 - claudecode集成
 
-## 项目运行前需要
+# 运行前注意事项
+
+- ios需要安装cocoapods
 
 ```bash
-pnpm i
+brew install cocoapods
 ```
-
-然后看 “如何运行多环境” 部分
-
-# cc mcp安装
+- claudecode mcp install
 
 [mcp](mcp.md)
 
-
-# 关于tddesigner
-
-ios需要安装cocoapods
-
-- `brew install cocoapods`
-
-# 一些常用工具函数，放在
-
-lib/utils/tools.dart
+- 一些常用工具函数，放在 `lib/utils/tools.dart`
 
 [tools](lib/utils/tools.dart)
 

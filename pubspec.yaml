@@ -41,6 +41,7 @@ dependencies:
   dio: ^5.7.0
   signals: ^6.3.0
   tdesign_flutter: ^0.2.6
+  get_storage: ^2.1.1
 
 dev_dependencies:
   flutter_test:

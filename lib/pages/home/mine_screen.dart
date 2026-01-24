@@ -41,10 +41,13 @@ class _MineScreenState extends State<MineScreen> {
 
   @override
   Widget build(BuildContext context) {
-    const overlayStyle = SystemUiOverlayStyle(
+    final theme = TDTheme.of(context);
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
+    final overlayStyle = SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,
-      statusBarIconBrightness: Brightness.dark,
-      statusBarBrightness: Brightness.light,
+      statusBarIconBrightness: isDark ? Brightness.light : Brightness.dark,
+      statusBarBrightness: isDark ? Brightness.dark : Brightness.light,
     );
 
     return AnnotatedRegion<SystemUiOverlayStyle>(
@@ -59,11 +62,12 @@ class _MineScreenState extends State<MineScreen> {
         body: Stack(
           children: [
             Container(
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/home/mine-bg.png'),
+                  image: const AssetImage('assets/home/mine-bg.png'),
                   fit: BoxFit.fitWidth,
                   alignment: Alignment.topCenter,
+                  opacity: isDark ? 0.3 : 1.0,
                 ),
               ),
             ),
@@ -80,7 +84,7 @@ class _MineScreenState extends State<MineScreen> {
                         Text(
                           '上海吉舰嘉科技服务有限公司',
                           style: TextStyle(
-                            color: const Color(0xFF333333),
+                            color: theme.fontGyColor1,
                             fontSize: 36.rpx,
                             fontWeight: FontWeight.w600,
                             height: 1.0,
@@ -92,12 +96,13 @@ class _MineScreenState extends State<MineScreen> {
                             SvgIcon(
                               icon: 'assets/home/icon-user.svg',
                               size: 28.rpx,
+                              color: theme.fontGyColor2,
                             ),
                             SizedBox(width: 8.rpx),
                             Text(
                               '销售顾问 闻晨佳',
                               style: TextStyle(
-                                color: const Color(0xFF333333),
+                                color: theme.fontGyColor2,
                                 fontSize: 24.rpx,
                               ),
                             ),
@@ -109,12 +114,13 @@ class _MineScreenState extends State<MineScreen> {
                             SvgIcon(
                               icon: 'assets/home/icon-phone.svg',
                               size: 28.rpx,
+                              color: theme.fontGyColor2,
                             ),
                             SizedBox(width: 8.rpx),
                             Text(
                               '13913380929',
                               style: TextStyle(
-                                color: const Color(0xFF333333),
+                                color: theme.fontGyColor2,
                                 fontSize: 24.rpx,
                               ),
                             ),
@@ -127,7 +133,7 @@ class _MineScreenState extends State<MineScreen> {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 32.rpx),
                     child: Material(
-                      color: Colors.white,
+                      color: theme.bgColorContainer,
                       borderRadius: BorderRadius.circular(12.rpx),
                       child: Column(
                         children: [
@@ -139,6 +145,16 @@ class _MineScreenState extends State<MineScreen> {
                               Navigator.pushNamed(
                                 context,
                                 AppRoutes.editPassword,
+                              );
+                            },
+                          ),
+                          menuItem(
+                            icon: 'assets/home/icon-customer.svg',
+                            title: '主题设置',
+                            onTap: () {
+                              Navigator.pushNamed(
+                                context,
+                                AppRoutes.themeSettings,
                               );
                             },
                           ),
@@ -174,19 +190,21 @@ class _MineScreenState extends State<MineScreen> {
     required VoidCallback onTap,
     bool isLast = false,
   }) {
+    final theme = TDTheme.of(context);
+
     return InkWell(
       onTap: onTap,
-      splashColor: Colors.grey.withValues(alpha: 0.1),
+      splashColor: theme.fontGyColor4.withValues(alpha: 0.1),
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 32.rpx, vertical: 24.rpx),
         child: Row(
           children: [
-            SvgIcon(icon: icon, size: 36.rpx, color: const Color(0xFF333333)),
+            SvgIcon(icon: icon, size: 36.rpx, color: theme.fontGyColor1),
             SizedBox(width: 8.rpx),
             Text(
               title,
               style: TextStyle(
-                color: const Color(0xFF333333),
+                color: theme.fontGyColor1,
                 fontSize: 28.rpx,
                 fontWeight: FontWeight.normal,
               ),
@@ -195,7 +213,7 @@ class _MineScreenState extends State<MineScreen> {
             Icon(
               Icons.arrow_forward_ios,
               size: 24.rpx,
-              color: Colors.grey.shade400,
+              color: theme.fontGyColor3,
             ),
           ],
         ),

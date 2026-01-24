@@ -8,21 +8,18 @@
       "problemMatcher": []
     },
     {
-      "label": "start-mock-server",
-      "type": "npm",
-      "script": "server",
+      "label": "prepare-mock-server-only",
+      "type": "shell",
+      "command": "node scripts/run.js --mock --skip-run-flutter",
       "isBackground": true,
       "problemMatcher": {
         "pattern": {
-          "regexp": "^$",
-          "file": 1,
-          "location": 2,
-          "message": 3
+          "regexp": "^\\[Mock Server\\]"
         },
         "background": {
           "activeOnStart": true,
-          "beginsPattern": ".*",
-          "endsPattern": ".*running.*"
+          "beginsPattern": "Starting mock server",
+          "endsPattern": "Mock server is running|ready"
         }
       }
     },
@@ -31,7 +28,7 @@
       "dependsOrder": "sequence",
       "dependsOn": [
         "generate-mock-env",
-        "start-mock-server"
+        "prepare-mock-server-only"
       ],
       "problemMatcher": []
     }
