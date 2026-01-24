@@ -14,6 +14,10 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
+        // Flutter 引擎镜像 - 清华大学开源软件镜像站
+        maven {
+            setUrl("https://mirrors.tuna.tsinghua.edu.cn/flutter/download.flutter.io")
+        }
     }
 }
 

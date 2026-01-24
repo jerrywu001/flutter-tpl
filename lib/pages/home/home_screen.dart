@@ -131,15 +131,116 @@ class _HomeScreenState extends State<HomeScreen> with SignalsMixin {
                 Navigator.pushNamed(context, AppRoutes.detail);
               },
             ),
+            const SizedBox(height: 50),
+            const Text('主题切换测试'),
+            const SizedBox(height: 10),
+            Watch((context) {
+              final currentMode = themeStore.themeMode.value;
+              return Column(
+                children: [
+                  Text(
+                    '当前主题: ${_getThemeModeName(currentMode)}',
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      TDButton(
+                        text: '浅色',
+                        size: TDButtonSize.small,
+                        type: currentMode == AppThemeMode.light
+                            ? TDButtonType.fill
+                            : TDButtonType.outline,
+                        theme: TDButtonTheme.primary,
+                        onTap: () async {
+                          await themeStore.setLightMode();
+                          TDToast.showText('已切换到浅色模式', context: context);
+                        },
+                      ),
+                      const SizedBox(width: 10),
+                      TDButton(
+                        text: '深色',
+                        size: TDButtonSize.small,
+                        type: currentMode == AppThemeMode.dark
+                            ? TDButtonType.fill
+                            : TDButtonType.outline,
+                        theme: TDButtonTheme.primary,
+                        onTap: () async {
+                          await themeStore.setDarkMode();
+                          TDToast.showText('已切换到深色模式', context: context);
+                        },
+                      ),
+                      const SizedBox(width: 10),
+                      TDButton(
+                        text: '跟随系统',
+                        size: TDButtonSize.small,
+                        type: currentMode == AppThemeMode.system
+                            ? TDButtonType.fill
+                            : TDButtonType.outline,
+                        theme: TDButtonTheme.primary,
+                        onTap: () async {
+                          await themeStore.setSystemMode();
+                          TDToast.showText('已切换到跟随系统', context: context);
+                        },
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  TDButton(
+                    text: '打开主题设置页面',
+                    size: TDButtonSize.small,
+                    type: TDButtonType.text,
+                    theme: TDButtonTheme.primary,
+                    onTap: () {
+                      Navigator.pushNamed(context, AppRoutes.themeSettings);
+                    },
+                  ),
+                ],
+              );
+            }),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: counterStore.increment,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        onPressed: () async {
+          // 循环切换主题
+          final currentMode = themeStore.themeMode.value;
+          if (currentMode == AppThemeMode.light) {
+            await themeStore.setDarkMode();
+            TDToast.showText('切换到深色模式', context: context);
+          } else if (currentMode == AppThemeMode.dark) {
+            await themeStore.setSystemMode();
+            TDToast.showText('切换到跟随系统', context: context);
+          } else {
+            await themeStore.setLightMode();
+            TDToast.showText('切换到浅色模式', context: context);
+          }
+        },
+        tooltip: '切换主题',
+        child: Watch((context) {
+          final mode = themeStore.themeMode.value;
+          return Icon(
+            mode == AppThemeMode.light
+                ? Icons.light_mode
+                : mode == AppThemeMode.dark
+                    ? Icons.dark_mode
+                    : Icons.brightness_auto,
+          );
+        }),
       ),
       bottomNavigationBar: const BottomNav(currentIndex: 0),
     );
+  }
+
+  String _getThemeModeName(AppThemeMode mode) {
+    switch (mode) {
+      case AppThemeMode.light:
+        return '浅色模式';
+      case AppThemeMode.dark:
+        return '深色模式';
+      case AppThemeMode.system:
+        return '跟随系统';
+    }
   }
 }

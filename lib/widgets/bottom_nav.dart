@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tdesign_flutter/tdesign_flutter.dart';
 import 'package:ybx_parent_client/main.dart';
 
 class BottomNav extends StatelessWidget {
@@ -8,13 +9,13 @@ class BottomNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = TDTheme.of(context);
+
     return BottomNavigationBar(
-      backgroundColor: Colors.white,
+      backgroundColor: theme.bgColorContainer,
       currentIndex: currentIndex,
-      selectedItemColor: const Color(0xFFA28071),
-      unselectedItemColor: Theme.of(
-        context,
-      ).colorScheme.onSurface.withValues(alpha: 0.3),
+      selectedItemColor: theme.brandNormalColor,
+      unselectedItemColor: theme.fontGyColor3,
       onTap: (index) {
         context.findAncestorStateOfType<MyHomePageState>()?.onItemTapped(index);
       },

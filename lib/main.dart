@@ -1,12 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:tdesign_flutter/tdesign_flutter.dart';
 import 'package:ybx_parent_client/api/request/index.dart';
 import 'package:ybx_parent_client/routes/routes.dart';
+import 'package:ybx_parent_client/stores/index.dart';
 import 'package:ybx_parent_client/utils/index.dart';
 
 import 'pages/home/index.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // 初始化 GetStorage
+  await GetStorage.init();
+
+  // 初始化 HTTP 请求
   HttpRequest.init();
+
+  // 启用 TDesign 多主题功能
+  TDTheme.needMultiTheme(true);
+
+  // 初始化主题状态
+  await themeStore.init();
+
   runApp(const MyApp());
 }
 
@@ -15,22 +31,30 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      // theme: ThemeData(
-      //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      // ),
-      initialRoute: AppRoutes.home,
-      builder: (context, child) {
-        SizeFit.initialize(context);
-        return child ?? const SizedBox.shrink();
-      },
-      routes: {
-        AppRoutes.home: (context) =>
-            const MyHomePage(title: 'Flutter Demo Home Page'),
-        ...AppRoutes.routes,
-      },
-    );
+    // 获取 TDesign 默认主题数据
+    final themeData = TDTheme.defaultData();
+
+    return Watch((context) {
+      return MaterialApp(
+        title: 'Flutter Demo',
+        // 浅色主题
+        theme: themeData.systemThemeDataLight,
+        // 深色主题
+        darkTheme: themeData.systemThemeDataDark,
+        // 主题模式（响应式）
+        themeMode: themeStore.flutterThemeMode.value,
+        initialRoute: AppRoutes.home,
+        builder: (context, child) {
+          SizeFit.initialize(context);
+          return child ?? const SizedBox.shrink();
+        },
+        routes: {
+          AppRoutes.home: (context) =>
+              const MyHomePage(title: 'Flutter Demo Home Page'),
+          ...AppRoutes.routes,
+        },
+      );
+    });
   }
 }
 
