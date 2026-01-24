@@ -31,7 +31,6 @@ class HttpResponse<T> {
     required this.code,
     required this.message,
     this.data,
-    this.context,
     this.headers,
   });
 
@@ -43,9 +42,6 @@ class HttpResponse<T> {
 
   /// 数据
   final T? data;
-
-  /// 上下文
-  final T? context;
 
   /// 响应头
   final Map<String, dynamic>? headers;
@@ -59,8 +55,7 @@ class HttpResponse<T> {
     Map<String, dynamic> json,
     T Function(dynamic)? fromJsonT,
   ) {
-    // 优先使用 context，如果不存在则尝试使用 data
-    final dynamic responseData = json['context'] ?? json['data'];
+    final dynamic responseData = json['data'];
 
     return HttpResponse<T>(
       code: json['code']?.toString() ?? '-1',

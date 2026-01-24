@@ -26,7 +26,7 @@ router.get('/notifications', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list,
       total,
       page: Number(page),
@@ -46,14 +46,14 @@ router.get('/notifications/:id', (req, res) => {
     return res.json({
       code: 404,
       message: '通知不存在',
-      context: null,
+      data: null,
     });
   }
 
   res.json({
     code: 0,
     message: null,
-    context: notification,
+    data: notification,
   });
 });
 
@@ -72,7 +72,7 @@ router.get('/notifications/unread-count', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       total: unread.length,
       system,
       task,
@@ -89,7 +89,7 @@ router.post('/notifications/:id/read', (req, res) => {
   res.json({
     code: 0,
     message: '标记已读成功',
-    context: null,
+    data: null,
   });
 });
 
@@ -100,7 +100,7 @@ router.post('/notifications/read-all', (req, res) => {
   res.json({
     code: 0,
     message: '全部标记已读成功',
-    context: null,
+    data: null,
   });
 });
 
@@ -111,7 +111,7 @@ router.post('/notifications/read-by-type', (req, res) => {
   res.json({
     code: 0,
     message: '标记已读成功',
-    context: null,
+    data: null,
   });
 });
 
@@ -122,7 +122,7 @@ router.post('/notifications/clear-read', (req, res) => {
   res.json({
     code: 0,
     message: '清除成功',
-    context: null,
+    data: null,
   });
 });
 
@@ -135,7 +135,7 @@ router.post('/notifications/:id/handle-invite', (req, res) => {
   res.json({
     code: 0,
     message: action === 'ACCEPT' ? '已接受邀请' : '已拒绝邀请',
-    context: null,
+    data: null,
   });
 });
 

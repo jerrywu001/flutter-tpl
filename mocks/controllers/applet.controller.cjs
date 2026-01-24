@@ -7,7 +7,7 @@ router.post('/login', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       token: '1234567890',
       tenantName: '上海吉舰嘉科技服务有限公司',
       shopName: '吉嘉名品汇浦东新区店',
@@ -23,7 +23,7 @@ router.post('/get-login-clients', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: apps,
+    data: apps,
   });
 });
 

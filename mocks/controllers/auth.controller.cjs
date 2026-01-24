@@ -18,14 +18,14 @@ router.post('/wechat/parent', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '缺少code参数',
-      context: null,
+      data: null,
     });
   }
 
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       accessToken: 'mock_access_token_' + Date.now(),
       refreshToken: 'mock_refresh_token_' + Date.now(),
       expiresIn: 604800,
@@ -41,14 +41,14 @@ router.post('/sms/send', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '手机号不能为空',
-      context: null,
+      data: null,
     });
   }
 
   res.json({
     code: 0,
     message: null,
-    context: { message: '验证码发送成功' },
+    data: { message: '验证码发送成功' },
   });
 });
 
@@ -59,7 +59,7 @@ router.post('/phone/bind', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '参数不完整',
-      context: null,
+      data: null,
     });
   }
 
@@ -68,7 +68,7 @@ router.post('/phone/bind', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '验证码错误',
-      context: null,
+      data: null,
     });
   }
 
@@ -76,7 +76,7 @@ router.post('/phone/bind', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: { message: '绑定成功' },
+    data: { message: '绑定成功' },
   });
 });
 
@@ -87,7 +87,7 @@ router.post('/phone/bind-wechat', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '缺少code参数',
-      context: null,
+      data: null,
     });
   }
 
@@ -95,7 +95,7 @@ router.post('/phone/bind-wechat', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: { message: '绑定成功' },
+    data: { message: '绑定成功' },
   });
 });
 
@@ -106,14 +106,14 @@ router.post('/identity/parent', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '参数不完整',
-      context: null,
+      data: null,
     });
   }
 
   res.json({
     code: 0,
     message: null,
-    context: { message: '认证成功' },
+    data: { message: '认证成功' },
   });
 });
 
@@ -124,14 +124,14 @@ router.post('/token/refresh', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '缺少refreshToken',
-      context: null,
+      data: null,
     });
   }
 
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       accessToken: 'mock_new_access_token_' + Date.now(),
       refreshToken: 'mock_new_refresh_token_' + Date.now(),
       expiresIn: 604800,
@@ -144,7 +144,7 @@ router.post('/logout', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: { message: '登出成功' },
+    data: { message: '登出成功' },
   });
 });
 
@@ -153,7 +153,7 @@ router.get('/me', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       userId: mockUser.userId,
       userType: mockUser.userType,
       openId: 'mock_open_id',

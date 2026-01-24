@@ -28,7 +28,7 @@ router.get('/profile', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: parentProfile,
+    data: parentProfile,
   });
 });
 
@@ -39,7 +39,7 @@ router.put('/profile', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: { message: '更新成功' },
+    data: { message: '更新成功' },
   });
 });
 
@@ -48,7 +48,7 @@ router.get('/children', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: children,
+    data: children,
   });
 });
 
@@ -58,13 +58,13 @@ router.get('/children/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '萌娃不存在',
-      context: null,
+      data: null,
     });
   }
   res.json({
     code: 0,
     message: null,
-    context: child,
+    data: child,
   });
 });
 
@@ -81,7 +81,7 @@ router.post('/children', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: { id: newId },
+    data: { id: newId },
   });
 });
 
@@ -91,14 +91,14 @@ router.put('/children/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '萌娃不存在',
-      context: null,
+      data: null,
     });
   }
   children[index] = { ...children[index], ...req.body };
   res.json({
     code: 0,
     message: null,
-    context: { message: '更新成功' },
+    data: { message: '更新成功' },
   });
 });
 
@@ -108,14 +108,14 @@ router.delete('/children/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '萌娃不存在',
-      context: null,
+      data: null,
     });
   }
   children.splice(index, 1);
   res.json({
     code: 0,
     message: null,
-    context: { message: '删除成功' },
+    data: { message: '删除成功' },
   });
 });
 
@@ -124,7 +124,7 @@ router.get('/addresses', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: addresses,
+    data: addresses,
   });
 });
 
@@ -134,13 +134,13 @@ router.get('/addresses/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '地址不存在',
-      context: null,
+      data: null,
     });
   }
   res.json({
     code: 0,
     message: null,
-    context: address,
+    data: address,
   });
 });
 
@@ -165,7 +165,7 @@ router.post('/addresses', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: { id: newId },
+    data: { id: newId },
   });
 });
 
@@ -175,14 +175,14 @@ router.put('/addresses/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '地址不存在',
-      context: null,
+      data: null,
     });
   }
   addresses[index] = { ...addresses[index], ...req.body };
   res.json({
     code: 0,
     message: null,
-    context: { message: '更新成功' },
+    data: { message: '更新成功' },
   });
 });
 
@@ -192,14 +192,14 @@ router.delete('/addresses/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '地址不存在',
-      context: null,
+      data: null,
     });
   }
   addresses.splice(index, 1);
   res.json({
     code: 0,
     message: null,
-    context: { message: '删除成功' },
+    data: { message: '删除成功' },
   });
 });
 
@@ -209,7 +209,7 @@ router.put('/addresses/:id/default', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '地址不存在',
-      context: null,
+      data: null,
     });
   }
   // 取消所有默认
@@ -218,7 +218,7 @@ router.put('/addresses/:id/default', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: { message: '设置成功' },
+    data: { message: '设置成功' },
   });
 });
 
@@ -250,7 +250,7 @@ router.get('/companions', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list,
       total,
       page: Number(page),
@@ -266,7 +266,7 @@ router.get('/companions/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '陪伴官不存在',
-      context: null,
+      data: null,
     });
   }
   // 详情增加额外字段
@@ -307,7 +307,7 @@ router.get('/companions/:id', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: detail,
+    data: detail,
   });
 });
 
@@ -316,7 +316,7 @@ router.get('/wallet', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: walletInfo,
+    data: walletInfo,
   });
 });
 
@@ -448,7 +448,7 @@ router.get('/calendar', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       tasks,
       summary: {
         totalTasks: 6,

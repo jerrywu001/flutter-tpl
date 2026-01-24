@@ -10,7 +10,7 @@ router.post('/parent/estimate', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '参数错误',
-      context: null,
+      data: null,
     });
   }
 
@@ -21,7 +21,7 @@ router.post('/parent/estimate', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       orderId,
       extensionHours,
       hourlyRate,
@@ -40,7 +40,7 @@ router.post('/parent/create', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '参数错误',
-      context: null,
+      data: null,
     });
   }
 
@@ -63,7 +63,7 @@ router.post('/parent/create', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: newExtension,
+    data: newExtension,
   });
 });
 
@@ -97,7 +97,7 @@ router.get('/parent/list', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list,
       total,
       page: Number(page),
@@ -115,14 +115,14 @@ router.get('/parent/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '延时申请不存在',
-      context: null,
+      data: null,
     });
   }
 
   res.json({
     code: 0,
     message: null,
-    context: extension,
+    data: extension,
   });
 });
 
@@ -134,7 +134,7 @@ router.post('/parent/:id/cancel', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '延时申请不存在',
-      context: null,
+      data: null,
     });
   }
 
@@ -143,7 +143,7 @@ router.post('/parent/:id/cancel', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '当前状态不可取消',
-      context: null,
+      data: null,
     });
   }
 
@@ -155,7 +155,7 @@ router.post('/parent/:id/cancel', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: { message: '取消成功' },
+    data: { message: '取消成功' },
   });
 });
 
@@ -166,7 +166,7 @@ router.get('/companion/pending', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list: result,
       total: result.length,
       page: 1,
@@ -183,7 +183,7 @@ router.get('/companion/pending-count', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: { count },
+    data: { count },
   });
 });
 
@@ -217,7 +217,7 @@ router.get('/companion/list', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list,
       total,
       page: Number(page),
@@ -235,14 +235,14 @@ router.get('/companion/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '延时申请不存在',
-      context: null,
+      data: null,
     });
   }
 
   res.json({
     code: 0,
     message: null,
-    context: extension,
+    data: extension,
   });
 });
 
@@ -254,7 +254,7 @@ router.post('/companion/:id/confirm', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '延时申请不存在',
-      context: null,
+      data: null,
     });
   }
 
@@ -263,7 +263,7 @@ router.post('/companion/:id/confirm', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '当前状态不可确认',
-      context: null,
+      data: null,
     });
   }
 
@@ -273,7 +273,7 @@ router.post('/companion/:id/confirm', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: { message: '确认成功' },
+    data: { message: '确认成功' },
   });
 });
 
@@ -285,7 +285,7 @@ router.post('/companion/:id/reject', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '延时申请不存在',
-      context: null,
+      data: null,
     });
   }
 
@@ -294,7 +294,7 @@ router.post('/companion/:id/reject', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '当前状态不可拒绝',
-      context: null,
+      data: null,
     });
   }
 
@@ -306,7 +306,7 @@ router.post('/companion/:id/reject', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: { message: '拒绝成功' },
+    data: { message: '拒绝成功' },
   });
 });
 

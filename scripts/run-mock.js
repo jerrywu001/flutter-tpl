@@ -29,6 +29,6 @@ console.log(`✓ 已创建 .env.mock.local，API_HOST = http://${localIP}:6009`)
 
 const envOnly = process.argv.includes('--env-only');
 if (!envOnly) {
-  console.log('\n运行 ./run.sh --mock...\n');
-  execSync('./scripts/run.sh --mock', { stdio: 'inherit', cwd: join(__dirname, '..') });
+  console.log('\n运行 Flutter with mock environment...\n');
+  execSync('node scripts/run.js --mock', { stdio: 'inherit', cwd: join(__dirname, '..') });
 }

@@ -167,7 +167,7 @@ class HttpRequest {
     SystemLog.json(response.data, label: 'Response', pretty: false);
     SystemLog.info('-----------------------------------------');
 
-    final data = response.data ?? response.context;
+    final data = response.data;
 
     // 如果响应数据是标准格式 {code, message, data}
     if (data is Map<String, dynamic> &&

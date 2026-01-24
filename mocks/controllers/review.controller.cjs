@@ -11,7 +11,7 @@ router.post('/service', (req, res) => {
   res.json({
     code: 0,
     message: '评价提交成功',
-    context: { id: newId },
+    data: { id: newId },
   });
 });
 
@@ -24,7 +24,7 @@ router.post('/child', (req, res) => {
   res.json({
     code: 0,
     message: '评价提交成功',
-    context: { id: newId },
+    data: { id: newId },
   });
 });
 
@@ -39,14 +39,14 @@ router.get('/:id', (req, res) => {
     return res.json({
       code: 404,
       message: '评价不存在',
-      context: null,
+      data: null,
     });
   }
 
   res.json({
     code: 0,
     message: null,
-    context: review,
+    data: review,
   });
 });
 
@@ -70,7 +70,7 @@ router.get('/my', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list,
       total,
       page: Number(page),
@@ -89,7 +89,7 @@ router.get('/check/:orderId', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       canReview: !existingReview,
       reason: existingReview ? '该订单已评价' : undefined,
       reviewId: existingReview ? existingReview.id : undefined,
@@ -119,7 +119,7 @@ router.get('/companion/:companionId', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list,
       total,
       page: Number(page),
@@ -154,7 +154,7 @@ router.get('/companion/:companionId/stats', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       companionId,
       totalReviews,
       averageRating,
@@ -191,7 +191,7 @@ router.get('/child/:childId', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list,
       total,
       page: Number(page),

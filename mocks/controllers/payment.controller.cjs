@@ -16,7 +16,7 @@ router.get('/wallet', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: walletInfo,
+    data: walletInfo,
   });
 });
 
@@ -27,7 +27,7 @@ router.post('/recharge', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '充值金额无效',
-      context: null,
+      data: null,
     });
   }
 
@@ -35,7 +35,7 @@ router.post('/recharge', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       message: '充值订单创建成功',
       paymentNo,
       payParams: {
@@ -56,7 +56,7 @@ router.post('/order', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '订单ID不能为空',
-      context: null,
+      data: null,
     });
   }
 
@@ -67,7 +67,7 @@ router.post('/order', (req, res) => {
     res.json({
       code: 0,
       message: null,
-      context: {
+      data: {
         message: '支付成功',
         paymentNo,
       },
@@ -77,7 +77,7 @@ router.post('/order', (req, res) => {
     res.json({
       code: 0,
       message: null,
-      context: {
+      data: {
         message: '支付订单创建成功',
         paymentNo,
         payParams: {
@@ -98,7 +98,7 @@ router.get('/packages', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list: activePackages,
     },
   });
@@ -111,13 +111,13 @@ router.get('/packages/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '课时包不存在',
-      context: null,
+      data: null,
     });
   }
   res.json({
     code: 0,
     message: null,
-    context: pkg,
+    data: pkg,
   });
 });
 
@@ -128,7 +128,7 @@ router.post('/purchase', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '课时包ID不能为空',
-      context: null,
+      data: null,
     });
   }
 
@@ -137,7 +137,7 @@ router.post('/purchase', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '课时包不存在',
-      context: null,
+      data: null,
     });
   }
 
@@ -149,13 +149,13 @@ router.post('/purchase', (req, res) => {
       return res.status(400).json({
         code: 400,
         message: '余额不足',
-        context: null,
+        data: null,
       });
     }
     res.json({
       code: 0,
       message: null,
-      context: {
+      data: {
         message: '购买成功',
         paymentNo,
       },
@@ -165,7 +165,7 @@ router.post('/purchase', (req, res) => {
     res.json({
       code: 0,
       message: null,
-      context: {
+      data: {
         message: '支付订单创建成功',
         paymentNo,
         payParams: {
@@ -204,7 +204,7 @@ router.get('/records', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list,
       total,
       page: Number(page),
@@ -221,13 +221,13 @@ router.get('/records/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '支付记录不存在',
-      context: null,
+      data: null,
     });
   }
   res.json({
     code: 0,
     message: null,
-    context: record,
+    data: record,
   });
 });
 

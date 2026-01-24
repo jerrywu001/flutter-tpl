@@ -12,6 +12,14 @@
 - 路由管理
 - claudecode集成
 
+## 项目运行前需要
+
+```bash
+pnpm i
+```
+
+然后看 “如何运行多环境” 部分
+
 # cc mcp安装
 
 [mcp](mcp.md)

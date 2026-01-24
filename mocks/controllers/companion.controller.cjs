@@ -44,7 +44,7 @@ router.get('/list', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list,
       total,
       page: Number(page),
@@ -63,7 +63,7 @@ router.get('/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '陪伴官不存在',
-      context: null,
+      data: null,
     });
   }
 
@@ -106,7 +106,7 @@ router.get('/:id', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: detail,
+    data: detail,
   });
 });
 
@@ -126,7 +126,7 @@ router.get('/service-types', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list: serviceTypes,
     },
   });

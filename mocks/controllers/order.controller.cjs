@@ -26,7 +26,7 @@ router.get('/parent/list', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list,
       total,
       page: Number(page),
@@ -43,13 +43,13 @@ router.get('/parent/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '订单不存在',
-      context: null,
+      data: null,
     });
   }
   res.json({
     code: 0,
     message: null,
-    context: order,
+    data: order,
   });
 });
 
@@ -60,7 +60,7 @@ router.post('/parent/:id/cancel', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '订单不存在',
-      context: null,
+      data: null,
     });
   }
   const order = orders[index];
@@ -68,7 +68,7 @@ router.post('/parent/:id/cancel', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '当前状态不可取消',
-      context: null,
+      data: null,
     });
   }
   const { reason } = req.body || {};
@@ -79,7 +79,7 @@ router.post('/parent/:id/cancel', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: { message: '取消成功' },
+    data: { message: '取消成功' },
   });
 });
 

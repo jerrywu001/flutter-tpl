@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       id: newId,
       taskNo,
       message: '需求发布成功',
@@ -66,7 +66,7 @@ router.get('/match', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list,
       total,
       page: Number(page),
@@ -110,7 +110,7 @@ router.get('/list', (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       list,
       total,
       page: Number(page),
@@ -143,13 +143,13 @@ router.get('/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '需求不存在',
-      context: null,
+      data: null,
     });
   }
   res.json({
     code: 0,
     message: null,
-    context: demand,
+    data: demand,
   });
 });
 
@@ -160,7 +160,7 @@ router.delete('/:id', (req, res) => {
     return res.status(404).json({
       code: 404,
       message: '需求不存在',
-      context: null,
+      data: null,
     });
   }
   const demand = demands[index];
@@ -168,14 +168,14 @@ router.delete('/:id', (req, res) => {
     return res.status(400).json({
       code: 400,
       message: '当前状态不可取消',
-      context: null,
+      data: null,
     });
   }
   demands[index].status = 'CANCELLED';
   res.json({
     code: 0,
     message: null,
-    context: { message: '取消成功' },
+    data: { message: '取消成功' },
   });
 });
 

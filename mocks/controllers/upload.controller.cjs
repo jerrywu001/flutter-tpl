@@ -19,7 +19,7 @@ router.post('/id-no/front/pic', upload.single('file'), (req, res) => {
   res.json({
     code: 0,
     message: null,
-    context: {
+    data: {
       picResult: {
         picUrl: base64,
         picType: file.originalname.split('.').pop(),
@@ -46,20 +46,20 @@ router.post('/id-no/back/pic', upload.single('file'), (req, res) => {
   }
 
   res.json({
-      code: 0,
-      message: null,
-      context: {
-        picResult: {
-          picUrl: base64,
-          picType: file.originalname.split('.').pop(),
-          docId: file.size + '',
-        },
-        idNoBackInfo: {
-          startDate: '20190503',
-          endDate: '20230503',
-        },
+    code: 0,
+    message: null,
+    data: {
+      picResult: {
+        picUrl: base64,
+        picType: file.originalname.split('.').pop(),
+        docId: file.size + '',
       },
-    });
+      idNoBackInfo: {
+        startDate: '20190503',
+        endDate: '20230503',
+      },
+    },
+  });
 });
 
 module.exports = router;

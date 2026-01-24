@@ -1,7 +1,18 @@
 {
   "permissions": {
-    "allow": [],
-    "ask": [],
-    "deny": []
+    "allow": [
+      "Bash(flutter pub get:*)",
+      "Bash(flutter analyze:*)",
+      "Bash(dart analyze:*)",
+      "Bash(flutter clean:*)",
+      "Bash(./gradlew clean:*)",
+      "Bash(flutter run:*)",
+      "Bash(npm run dev)",
+      "Bash(tasklist:*)",
+      "Bash(findstr:*)",
+      "Bash(start:*)"
+    ],
+    "deny": [],
+    "ask": []
   }
 }
