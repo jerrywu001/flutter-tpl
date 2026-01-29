@@ -180,8 +180,8 @@ class _HomeScreenState extends State<HomeScreen> with SignalsMixin {
             mode == AppThemeMode.light
                 ? Icons.light_mode
                 : mode == AppThemeMode.dark
-                    ? Icons.dark_mode
-                    : Icons.brightness_auto,
+                ? Icons.dark_mode
+                : Icons.brightness_auto,
           );
         }),
       ),

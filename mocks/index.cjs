@@ -21,6 +21,7 @@ const messageController = require('./controllers/message.controller.cjs');
 const reviewController = require('./controllers/review.controller.cjs');
 const adminController = require('./controllers/admin.controller.cjs');
 const extensionController = require('./controllers/extension.controller.cjs');
+const mourningController = require('./controllers/mourning.controller.cjs');
 
 // Routes - 旧路由（兼容）
 app.use('/api/luxmall-infra', require('./routes/files.cjs'));
@@ -39,6 +40,7 @@ app.use('/api/message', messageController);
 app.use('/api/review', reviewController);
 app.use('/api/admin', adminController);
 app.use('/api/extension', extensionController);
+app.use('/api/mourning', mourningController);
 
 // 健康检查
 app.get('/api/health', (req, res) => {
@@ -72,6 +74,8 @@ app.listen(port, () => {
   console.log(`  - GET  /api/review/my`);
   console.log(`  - GET  /api/review/companion/:id/stats`);
   console.log(`  - GET  /api/admin/tags`);
+  console.log(`  - GET  /api/mourning/status`);
+  console.log(`  - POST /api/mourning/toggle (test)`);
   console.log(`  - POST /api/extension/parent/estimate`);
   console.log(`  - POST /api/extension/parent/create`);
   console.log(`  - GET  /api/extension/parent/list`);

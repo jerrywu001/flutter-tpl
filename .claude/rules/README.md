@@ -18,6 +18,9 @@
 - `11-logging.md` - 日志工具
 - `12-types.md` - 类型定义规范
 - `13-tdesign.md` - TDesign UI 组件库使用指南
+- `14-theme-configuration.md` - 主题配置功能（深色模式）
+- `15-get-storage.md` - GetStorage 本地存储
+- `16-mourning-mode.md` - 哀悼日模式（灰度滤镜）
 
 ## 快速开始
 
@@ -31,7 +34,10 @@
 项目最近新增了以下功能：
 
 - **HTTP 请求系统**：基于 dio 的统一请求封装
-- **环境配置**：支持多环境切换（开发/生产）
+- **环境配置**：支持多环境切换（开发/生产/mock）
 - **状态管理**：使用 signals 进行响应式状态管理
 - **日志工具**：彩色日志输出和 JSON 格式化
 - **Mock 服务器**：本地开发 mock 数据支持
+- **主题配置**：支持浅色、深色和跟随系统三种主题模式
+- **本地存储**：使用 GetStorage 替代 SharedPreferences
+- **哀悼日模式**：特殊日期自动应用灰度滤镜

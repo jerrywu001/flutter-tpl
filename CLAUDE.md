@@ -16,6 +16,7 @@
 - `signals: ^6.3.0` - 响应式状态管理
 - `colorful_print: ^0.1.2` - 彩色日志输出
 - `tdesign_flutter: ^0.2.6` - 腾讯 TDesign UI 组件库（详见 `.claude/rules/13-tdesign.md`）
+- `get_storage: ^2.0.0` - 本地存储（详见 `.claude/rules/15-get-storage.md`）
 
 ## 构建和开发命令
 
@@ -365,3 +366,48 @@ Material(
 ```
 
 没有 `Material` 作为父容器，`InkWell` 的墨水效果在不透明背景上将不可见。
+
+## 哀悼日模式
+
+项目支持哀悼日模式（灰度滤镜），在特殊日期自动将整个应用变为灰色。
+
+### 工作原理
+
+- **状态管理**：在 `main.dart` 的 `_MyAppState` 中管理
+- **查询时机**：应用启动和从后台返回时自动查询接口
+- **滤镜应用**：通过 `ColorFiltered` 包裹整个应用
+
+```dart
+// 在 MaterialApp 的 builder 中应用灰度滤镜
+if (_isMourningDay) {
+  return ColorFiltered(
+    colorFilter: _grayscaleFilter,
+    child: sizedChild,
+  );
+}
+```
+
+### API 接口
+
+```dart
+// 查询哀悼日状态
+final result = await queryMourningStatus();
+
+// 响应类型
+class MourningStatusResponse {
+  final bool isMourningDay;
+  final String? reason;
+  final String? startDate;
+  final String? endDate;
+}
+```
+
+### 支持的哀悼日期（降级）
+
+当接口失败时，自动降级到本地日期检查：
+- 12月13日 - 南京大屠杀死难者国家公祭日
+- 5月12日 - 汶川地震纪念日
+- 4月4日 - 清明节
+- 7月28日 - 唐山大地震纪念日
+
+详细说明请参考 `.claude/rules/16-mourning-mode.md`

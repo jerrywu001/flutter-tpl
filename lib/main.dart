@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:tdesign_flutter/tdesign_flutter.dart';
+import 'package:ybx_parent_client/api/mourning/index.dart';
 import 'package:ybx_parent_client/api/request/index.dart';
 import 'package:ybx_parent_client/routes/routes.dart';
 import 'package:ybx_parent_client/stores/index.dart';
@@ -26,8 +28,69 @@ void main() async {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
+  /// 是否是哀悼日
+  bool _isMourningDay = false;
+
+  /// 灰度滤镜矩阵
+  static const ColorFilter _grayscaleFilter = ColorFilter.matrix(<double>[
+    0.2126, 0.7152, 0.0722, 0, 0, // 红色通道
+    0.2126, 0.7152, 0.0722, 0, 0, // 绿色通道
+    0.2126, 0.7152, 0.0722, 0, 0, // 蓝色通道
+    0, 0, 0, 1, 0, // Alpha通道
+  ]);
+
+  @override
+  void initState() {
+    super.initState();
+    // 注册应用生命周期观察者
+    WidgetsBinding.instance.addObserver(this);
+    // 应用启动后第一帧时查询哀悼日状态
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      _fetchMourningStatus();
+    });
+  }
+
+  @override
+  void dispose() {
+    // 移除观察者
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    // 当应用从后台返回前台时，重新检查哀悼日
+    if (state == AppLifecycleState.resumed) {
+      _fetchMourningStatus();
+    }
+  }
+
+  /// 查询哀悼日状态
+  Future<void> _fetchMourningStatus() async {
+    try {
+      final result = await queryMourningStatus();
+
+      if (result.isMourningDay != _isMourningDay) {
+        setState(() {
+          _isMourningDay = result.isMourningDay;
+        });
+
+        if (result.isMourningDay) {
+          SystemLog.warning('🕯️ 哀悼模式已开启');
+        }
+      }
+    } catch (e) {
+      SystemLog.error('查询哀悼日状态失败: $e');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +117,17 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           // rpx适配
           SizeFit.initialize(context);
-          return child ?? const SizedBox.shrink();
+          final sizedChild = child ?? const SizedBox.shrink();
+
+          // 哀悼日模式下应用灰度滤镜
+          if (_isMourningDay) {
+            return ColorFiltered(
+              colorFilter: _grayscaleFilter,
+              child: sizedChild,
+            );
+          }
+
+          return sizedChild;
         },
         routes: {
           AppRoutes.home: (context) =>
