@@ -35,6 +35,13 @@ class MyApp extends StatelessWidget {
     final themeData = TDTheme.defaultData();
 
     return Watch((context) {
+      // 别删除，Fix安卓: signal 依赖被追踪（直接访问 themeMode）
+      final _ = themeStore.themeMode.value;
+
+      SystemLog.success(
+        '🌗 System Theme Changed:  ${themeStore.flutterThemeMode.value}（${themeStore.themeMode.value}）',
+      );
+
       return MaterialApp(
         title: 'Flutter Demo',
         // 浅色主题
@@ -45,6 +52,7 @@ class MyApp extends StatelessWidget {
         themeMode: themeStore.flutterThemeMode.value,
         initialRoute: AppRoutes.home,
         builder: (context, child) {
+          // rpx适配
           SizeFit.initialize(context);
           return child ?? const SizedBox.shrink();
         },

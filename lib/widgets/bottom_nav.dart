@@ -10,12 +10,13 @@ class BottomNav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = TDTheme.of(context);
+    final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return BottomNavigationBar(
       backgroundColor: theme.bgColorContainer,
       currentIndex: currentIndex,
       selectedItemColor: theme.brandNormalColor,
-      unselectedItemColor: theme.fontGyColor3,
+      unselectedItemColor: isDark ? theme.fontWhColor1 : theme.fontGyColor3,
       onTap: (index) {
         context.findAncestorStateOfType<MyHomePageState>()?.onItemTapped(index);
       },

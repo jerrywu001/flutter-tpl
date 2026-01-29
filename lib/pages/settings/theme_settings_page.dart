@@ -10,10 +10,7 @@ class ThemeSettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const TDText('主题设置'),
-        centerTitle: true,
-      ),
+      appBar: AppBar(title: const TDText('主题设置'), centerTitle: true),
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 24.rpx),
         child: Column(
@@ -28,23 +25,28 @@ class ThemeSettingsPage extends StatelessWidget {
                 cells: [
                   TDCell(
                     title: '跟随系统',
-                    note: '开启后，将跟随系统打开或关闭深色模式',
+                    note: '开启后，主题将跟随系统自动调整',
                     rightIconWidget: TDSwitch(
                       isOn: isSystemMode,
-                      // onChanged: (isOn) async {
-                      //   if (isOn) {
-                      //     await themeStore.setSystemMode();
-                      //   } else {
-                      //     // 关闭跟随系统时，根据当前系统主题设置对应模式
-                      //     final brightness =
-                      //         MediaQuery.platformBrightnessOf(context);
-                      //     if (brightness == Brightness.dark) {
-                      //       await themeStore.setDarkMode();
-                      //     } else {
-                      //       await themeStore.setLightMode();
-                      //     }
-                      //   }
-                      // },
+                      onChanged: (isOn) {
+                        if (isOn) {
+                          SystemLog.info('系统跟随已打开');
+
+                          themeStore.setSystemMode();
+                        } else {
+                          SystemLog.info('系统跟随已关闭');
+                          final brightness = MediaQuery.platformBrightnessOf(
+                            context,
+                          );
+                          if (brightness == Brightness.dark) {
+                            themeStore.setDarkMode();
+                          } else {
+                            themeStore.setLightMode();
+                          }
+                        }
+
+                        return isOn;
+                      },
                     ),
                     disabled: true,
                   ),
@@ -57,8 +59,7 @@ class ThemeSettingsPage extends StatelessWidget {
             // 手动选择主题
             Watch((context) {
               final currentMode = themeStore.themeMode.value;
-              final systemBrightness =
-                  MediaQuery.platformBrightnessOf(context);
+              final systemBrightness = MediaQuery.platformBrightnessOf(context);
 
               // 判断是否选中某个模式
               bool isSelected(AppThemeMode mode) {
@@ -94,8 +95,9 @@ class ThemeSettingsPage extends StatelessWidget {
                   TDCell(
                     title: '深色模式',
                     leftIcon: TDIcons.mode_dark,
-                    rightIcon:
-                        isSelected(AppThemeMode.dark) ? TDIcons.check : null,
+                    rightIcon: isSelected(AppThemeMode.dark)
+                        ? TDIcons.check
+                        : null,
                     onClick: (cell) async {
                       await themeStore.setDarkMode();
                     },

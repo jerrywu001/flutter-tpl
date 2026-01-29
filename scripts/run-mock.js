@@ -1,9 +1,19 @@
 #!/usr/bin/env node
 
 const { networkInterfaces } = require('os');
-const { writeFileSync } = require('fs');
+const { writeFileSync, existsSync } = require('fs');
 const { execSync } = require('child_process');
 const { join } = require('path');
+
+// 检查并安装依赖
+const rootDir = join(__dirname, '..');
+const nodeModulesPath = join(rootDir, 'node_modules');
+
+if (!existsSync(nodeModulesPath)) {
+  console.log('node_modules 不存在，正在安装依赖...\n');
+  execSync('pnpm i', { stdio: 'inherit', cwd: rootDir });
+  console.log('\n✓ 依赖安装完成\n');
+}
 
 function getLocalIP() {
   const nets = networkInterfaces();
